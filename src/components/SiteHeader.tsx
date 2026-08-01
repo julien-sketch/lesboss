@@ -23,7 +23,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-ink bg-paper/88 backdrop-blur-md">
       <nav
-        className="mx-auto flex h-6 max-w-7xl items-center justify-between px-1.5 sm:h-16 sm:px-6 lg:px-8"
+        className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
         aria-label="Navigation principale"
       >
         <Link
@@ -37,16 +37,16 @@ export function SiteHeader() {
             width={240}
             height={157}
             priority
-            className="h-5 w-auto sm:h-14"
+            className="h-10 w-auto sm:h-14"
           />
         </Link>
 
-        <div className="flex items-center gap-2 sm:gap-5">
+        <div className="hidden items-center gap-5 md:flex">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className={`border-b px-0.5 pb-0.5 text-[5px] font-bold transition hover:text-ink focus:outline-none focus-visible:ring-4 focus-visible:ring-punch motion-reduce:transition-none sm:border-b-2 sm:px-1 sm:pb-1 sm:text-[10px] lg:text-xs ${
+              className={`border-b-2 px-1 pb-1 text-xs font-bold transition hover:text-ink focus:outline-none focus-visible:ring-4 focus-visible:ring-punch motion-reduce:transition-none ${
                 pathname === item.href
                   ? "border-punch text-ink"
                   : "border-transparent text-muted"
@@ -57,15 +57,15 @@ export function SiteHeader() {
           ))}
         </div>
 
-        <div className="block">
+        <div className="hidden sm:block">
           <ButtonLink href="/evenements/tour-du-monde-des-boss">
             Réserver
           </ButtonLink>
         </div>
 
-        {/* <button
+        <button
           type="button"
-          className="inline-flex size-9 items-center justify-center rounded-full bg-ink text-white focus:outline-none focus-visible:ring-4 focus-visible:ring-punch sm:hidden"
+          className="inline-flex size-10 items-center justify-center rounded-full bg-ink text-white focus:outline-none focus-visible:ring-4 focus-visible:ring-punch md:hidden"
           aria-controls="menu-mobile"
           aria-expanded={isOpen}
           aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
@@ -74,12 +74,12 @@ export function SiteHeader() {
           <span aria-hidden="true" className="text-2xl leading-none">
             {isOpen ? "×" : "≡"}
           </span>
-        </button> */}
+        </button>
       </nav>
 
       <div
         id="menu-mobile"
-        className={`border-t border-ink bg-paper px-4 pb-5 sm:hidden ${
+        className={`border-t border-ink bg-paper px-4 pb-5 md:hidden ${
           isOpen ? "block" : "hidden"
         }`}
       >

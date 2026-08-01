@@ -19,7 +19,7 @@ export function SiteFooter() {
   return (
     <footer className="relative overflow-hidden bg-ink text-white">
       <div className="absolute left-0 top-0 h-1 w-full bg-punch" />
-      <div className="mx-auto grid max-w-7xl grid-cols-4 gap-3 px-2 py-8 sm:gap-10 sm:px-6 sm:py-12 md:grid-cols-[1.2fr_0.8fr_0.8fr] lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 sm:py-12 md:grid-cols-[1.2fr_0.8fr_0.8fr] md:gap-10 lg:px-8">
         <div>
           <div className="inline-flex rounded bg-white px-2 py-1 sm:rounded-md sm:px-4 sm:py-2">
             <Image
@@ -30,19 +30,19 @@ export function SiteFooter() {
               className="h-8 w-auto sm:h-20"
             />
           </div>
-          <p className="mt-2 max-w-md text-[4px] font-bold leading-[1.45] text-white/75 sm:mt-4 sm:text-sm">
+          <p className="mt-4 max-w-md text-sm font-bold leading-6 text-white/75">
             {siteConfig.mantra}
           </p>
-          <p className="mt-2 max-w-md text-[4px] leading-[1.45] text-white/55 sm:mt-4 sm:text-sm sm:leading-6">
+          <p className="mt-3 max-w-md text-sm leading-6 text-white/55">
             Créer des événements professionnels qui marquent le territoire.
           </p>
         </div>
         <div>
-          <p className="text-[5px] font-black uppercase text-punch sm:text-base">Navigation</p>
-          <ul className="mt-2 space-y-1 sm:mt-4 sm:space-y-3">
+          <p className="text-base font-black uppercase text-punch">Navigation</p>
+          <ul className="mt-4 space-y-3">
             {primaryLinks.map((link) => (
               <li key={link.href}>
-                <Link className="text-[4px] text-white/78 hover:text-white sm:text-base" href={link.href}>
+                <Link className="text-base text-white/78 hover:text-white" href={link.href}>
                   {link.label}
                 </Link>
               </li>
@@ -50,16 +50,16 @@ export function SiteFooter() {
           </ul>
         </div>
         <div>
-          <p className="text-[5px] font-black uppercase text-punch sm:text-base">Liens utiles</p>
-          <ul className="mt-2 space-y-1 sm:mt-4 sm:space-y-3">
+          <p className="text-base font-black uppercase text-punch">Liens utiles</p>
+          <ul className="mt-4 space-y-3">
             <li>
-              <Link className="text-[4px] text-white/78 hover:text-white sm:text-base" href="/mentions-legales">
+              <Link className="text-base text-white/78 hover:text-white" href="/mentions-legales">
                 Mentions légales
               </Link>
             </li>
             {siteConfig.socialLinks.map((link) => (
               <li key={link.label}>
-                <a className="text-[4px] text-white/78 hover:text-white sm:text-base" href={link.href}>
+                <a className="text-base text-white/78 hover:text-white" href={link.href}>
                   {link.label}
                 </a>
               </li>
@@ -67,7 +67,7 @@ export function SiteFooter() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-white/10 px-4 py-3 text-center text-[4px] text-white/50 sm:py-6 sm:text-sm">
+      <div className="border-t border-white/10 px-4 py-5 text-center text-sm text-white/50 sm:py-6">
         © {year} Les Boss. Le business est sérieux. Sauf l&apos;ambiance.
       </div>
     </footer>

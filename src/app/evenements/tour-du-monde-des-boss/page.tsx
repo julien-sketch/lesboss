@@ -44,7 +44,7 @@ export default function TourDuMondePage() {
 
   return (
     <main className="overflow-hidden bg-[#070707] text-white">
-      <section className="relative min-h-screen overflow-hidden px-4 py-10 sm:px-6 sm:py-16 lg:px-8">
+      <section className="relative min-h-screen overflow-hidden px-4 py-8 sm:px-6 sm:py-16 lg:px-8">
         <Image
           src="/images/tour-du-monde-affiche.svg"
           alt=""
@@ -58,30 +58,30 @@ export default function TourDuMondePage() {
         <div className="absolute inset-0 shadow-[inset_0_0_140px_rgba(0,0,0,0.96),inset_0_0_42px_rgba(255,190,104,0.28)]" />
         <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#070707] to-transparent" />
 
-        <div className="relative z-10 mx-auto flex min-h-[calc(100vh-5rem)] max-w-7xl items-end justify-end lg:items-center">
-          <div className="relative w-full max-w-3xl overflow-hidden rounded-[28px] border border-white/15 bg-[#07111f]/55 p-5 shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur-[3px] sm:p-8 lg:p-10">
+        <div className="relative z-10 mx-auto flex min-h-[calc(100vh-4rem)] max-w-7xl items-end justify-end lg:items-center">
+          <div className="relative w-full max-w-3xl overflow-hidden rounded-[24px] border border-white/15 bg-[#07111f]/62 p-5 shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur-[3px] sm:rounded-[28px] sm:p-8 lg:p-10">
             <div className="pointer-events-none absolute inset-x-8 top-7 h-px bg-white/25" />
             <div className="pointer-events-none absolute right-8 top-7 text-[10px] font-black uppercase tracking-[0.45em] text-white/35">
               Boarding pass
             </div>
 
-            <p className="text-[10px] font-black uppercase tracking-[0.5em] text-white/45">
+            <p className="max-w-[75%] text-[10px] font-black uppercase tracking-[0.28em] text-white/45 sm:max-w-none sm:tracking-[0.5em]">
               45° 38° 24° N · 5° 55° 10° E
             </p>
-            <h1 className="mt-12 text-balance font-black uppercase leading-[0.92] tracking-[-0.02em] text-white text-[clamp(3.1rem,7vw,7.5rem)]">
+            <h1 className="mt-12 text-balance font-black uppercase leading-[0.92] tracking-[-0.02em] text-white text-[clamp(2.6rem,7vw,7.5rem)]">
               Le Tour du Monde
             </h1>
-            <p className="mt-1 rotate-[-2deg] text-[clamp(2rem,4vw,4.5rem)] font-black leading-none text-[#ff7fa6]">
+            <p className="mt-2 rotate-[-2deg] text-[clamp(1.8rem,4vw,4.5rem)] font-black leading-none text-[#ff7fa6]">
               des Boss
             </p>
 
-            <div className="mt-10 grid grid-cols-2 gap-4 border-y border-white/15 py-6 sm:grid-cols-4">
+            <div className="mt-8 grid grid-cols-2 gap-4 border-y border-white/15 py-5 sm:mt-10 sm:grid-cols-4 sm:py-6">
               {flightDetails.map((detail) => (
                 <div key={detail.label}>
                   <p className="text-[10px] font-black uppercase tracking-[0.16em] text-white/55">
                     {detail.label}
                   </p>
-                  <p className="mt-1 text-2xl font-black uppercase leading-none sm:text-3xl">
+                  <p className="mt-1 text-xl font-black uppercase leading-none sm:text-3xl">
                     {detail.value}
                   </p>
                 </div>
@@ -93,7 +93,7 @@ export default function TourDuMondePage() {
                 Destination
               </p>
               <div className="mt-2 flex flex-wrap items-end gap-3">
-                <p className="text-[clamp(3rem,6vw,6.5rem)] font-black uppercase leading-none tracking-[-0.04em]">
+                <p className="text-[clamp(2.7rem,6vw,6.5rem)] font-black uppercase leading-none tracking-[-0.04em]">
                   Windalps
                 </p>
                 <span className="mb-2 bg-white/75 px-2 py-1 text-xl font-black uppercase text-[#1e1f25]">
@@ -102,13 +102,13 @@ export default function TourDuMondePage() {
               </div>
             </div>
 
-            <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
               {boardingProgram.map((item) => (
                 <div key={item.title} className="border-l border-white/15 pl-4">
                   <p className="inline-flex bg-white px-2.5 py-1 text-[12px] font-black uppercase text-[#1e1f25]">
                     {item.title}
                   </p>
-                  <p className="mt-4 text-sm font-bold uppercase leading-6 text-white/80">
+                  <p className="mt-3 text-sm font-bold uppercase leading-6 text-white/80">
                     {item.text}
                   </p>
                 </div>
@@ -120,7 +120,7 @@ export default function TourDuMondePage() {
                 <p className="text-[12px] font-black uppercase tracking-[0.2em] text-white/55">
                   Entrée
                 </p>
-                <p className="mt-1 flex items-end gap-2 text-7xl font-black leading-none">
+                <p className="mt-1 flex items-end gap-2 text-6xl font-black leading-none sm:text-7xl">
                   45€
                   <span className="mb-2 bg-white px-2 py-1 text-lg uppercase text-[#1e1f25]">
                     /pers
@@ -135,7 +135,7 @@ export default function TourDuMondePage() {
                     Boarding pass
                   </span>
                 </div>
-                <div className="flex flex-col gap-3 sm:flex-row">
+                <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                   <a
                     href={event.reservationUrl}
                     className="inline-flex min-h-12 items-center justify-center bg-white px-6 py-3 text-sm font-black uppercase tracking-[0.18em] text-[#101114] transition hover:bg-[#ff7fa6] hover:text-white"

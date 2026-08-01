@@ -22,10 +22,10 @@ type FeatureIconProps = {
 function FeatureIcon({ icon: Icon, variant }: FeatureIconProps) {
   if (variant === "stat") {
     return (
-      <span className="mx-auto mb-1.5 grid size-5 place-items-center rounded-full bg-punch sm:mb-4 sm:size-16">
+      <span className="mx-auto mb-4 grid size-12 place-items-center rounded-full bg-punch sm:size-16">
         <Icon
           aria-hidden="true"
-          className="size-3.5 text-ink sm:size-9"
+          className="size-7 text-ink sm:size-9"
           strokeWidth={2}
         />
       </span>
@@ -33,10 +33,10 @@ function FeatureIcon({ icon: Icon, variant }: FeatureIconProps) {
   }
 
   return (
-    <span className="mb-2 inline-flex text-punch sm:mb-5">
+    <span className="mb-5 inline-flex text-punch">
       <Icon
         aria-hidden="true"
-        className="size-5 sm:size-12"
+        className="size-10 sm:size-12"
         strokeWidth={2}
       />
     </span>
@@ -176,18 +176,18 @@ export default function Home() {
 
   return (
     <main>
-      <section className="relative overflow-hidden px-1.5 pb-10 pt-5 sm:px-6 sm:pb-24 sm:pt-20 lg:px-8">
+      <section className="relative overflow-hidden px-4 pb-14 pt-10 sm:px-6 sm:pb-24 sm:pt-20 lg:px-8">
         <div className="absolute right-[-28%] top-10 h-72 w-72 rounded-full bg-punch/10 blur-3xl sm:right-[-10%] sm:h-[520px] sm:w-[520px]" />
         <div className="absolute bottom-0 left-[-20%] h-64 w-64 rounded-full bg-ink/5 blur-3xl" />
-        <div className="mx-auto grid max-w-7xl grid-cols-[0.9fr_1.1fr] items-center gap-2 sm:gap-12 lg:grid-cols-[0.95fr_1.05fr]">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-12">
           <div className="relative z-10 min-w-0">
-            <p className="mb-1.5 flex items-center gap-1 text-[4px] font-black uppercase tracking-[0.08em] text-ink sm:mb-5 sm:gap-2 sm:text-sm">
-              <span className="grid size-2.5 place-items-center rounded-full bg-punch text-[6px] sm:size-7 sm:text-[10px]">
+            <p className="mb-4 flex items-center gap-2 text-xs font-black uppercase tracking-[0.12em] text-ink sm:mb-5 sm:text-sm">
+              <span className="grid size-7 place-items-center rounded-full bg-punch text-[10px]">
                 *
               </span>
               {siteConfig.mantra}
             </p>
-            <h1 className="text-[15px] font-black uppercase leading-[0.92] text-ink sm:text-6xl lg:text-7xl">
+            <h1 className="text-5xl font-black uppercase leading-[0.92] text-ink sm:text-6xl lg:text-7xl">
               Le business est sérieux.
               <span className="mt-1 block sm:mt-3">
                 Sauf{" "}
@@ -195,12 +195,12 @@ export default function Home() {
                 .
               </span>
             </h1>
-            <p className="mt-2 max-w-xl text-[5px] leading-[1.55] text-muted sm:mt-7 sm:text-lg sm:leading-8">
+            <p className="mt-6 max-w-xl text-base leading-7 text-muted sm:mt-7 sm:text-lg sm:leading-8">
               Les Boss crée des événements professionnels originaux pour
               permettre aux dirigeants de faire du business autrement, dans une
               ambiance conviviale et décontractée.
             </p>
-            <div className="mt-2.5 flex flex-wrap gap-1.5 sm:mt-8 sm:gap-4">
+            <div className="mt-7 flex flex-wrap gap-3 sm:mt-8 sm:gap-4">
               <ButtonLink href="/evenements/tour-du-monde-des-boss">
                 Découvrir l&apos;événement
               </ButtonLink>
@@ -219,39 +219,39 @@ export default function Home() {
                 width={900}
                 height={760}
                 priority
-                className="h-[124px] w-full object-cover sm:h-[520px]"
+                className="h-[320px] w-full object-cover sm:h-[520px]"
               />
             </div>
-            <div className="absolute -bottom-3 left-2 z-20 w-12 -rotate-6 rounded border border-line bg-white p-1 shadow-boss sm:-bottom-9 sm:left-8 sm:w-36 sm:rounded-lg sm:p-4">
+            <div className="absolute -bottom-5 left-4 z-20 w-28 -rotate-6 rounded-lg border border-line bg-white p-3 shadow-boss sm:-bottom-9 sm:left-8 sm:w-36 sm:p-4">
               <Image
                 src="/images/tour-du-monde-des-boss.svg"
                 alt="Aperçu graphique du Tour du monde des Boss"
                 width={220}
                 height={160}
-                className="h-7 w-full rounded-sm object-cover sm:h-24 sm:rounded-md"
+                className="h-16 w-full rounded-md object-cover sm:h-24"
               />
-              <p className="mt-0.5 text-center text-[3px] font-black uppercase text-ink sm:mt-1 sm:text-[11px]">
+              <p className="mt-1 text-center text-[9px] font-black uppercase text-ink sm:text-[11px]">
                 Our Next Event
               </p>
             </div>
-            <div className="absolute -right-1 -top-2 z-20 grid size-8 rotate-12 place-items-center rounded-full border-2 border-punch bg-ink p-1 text-center text-[4px] font-black uppercase leading-tight text-white sm:-right-7 sm:-top-7 sm:size-28 sm:p-2 sm:text-xs">
+            <div className="absolute -right-3 -top-4 z-20 grid size-20 rotate-12 place-items-center rounded-full border-2 border-punch bg-ink p-2 text-center text-[10px] font-black uppercase leading-tight text-white sm:-right-7 sm:-top-7 sm:size-28 sm:text-xs">
               Dirigeants fondateurs
             </div>
           </div>
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-cloud/70 px-4 py-9 sm:px-6 sm:py-24 lg:px-8">
+      <section className="relative overflow-hidden bg-cloud/70 px-4 py-14 sm:px-6 sm:py-24 lg:px-8">
         <div className="dot-pattern absolute inset-0 opacity-[0.045]" />
         <div className="relative mx-auto max-w-4xl text-center">
-          <p className="mb-2 text-[6px] font-black uppercase tracking-[0.28em] text-ink sm:mb-4 sm:text-sm">
+          <p className="mb-3 text-xs font-black uppercase tracking-[0.28em] text-ink sm:mb-4 sm:text-sm">
             Présentation
           </p>
-          <h2 className="text-balance text-[14px] font-black leading-tight text-ink sm:text-5xl">
+          <h2 className="text-balance text-3xl font-black leading-tight text-ink sm:text-5xl">
             Créer des moments qui{" "}
             <span className="sketch-underline">comptent vraiment</span>.
           </h2>
-          <p className="mx-auto mt-3 max-w-2xl text-[6px] leading-[1.65] text-muted sm:mt-6 sm:text-lg sm:leading-8">
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-muted sm:mt-6 sm:text-lg sm:leading-8">
             Les Boss crée des événements professionnels où les dirigeants se
             rencontrent, échangent et développent des opportunités dans une
             ambiance décontractée. Des lieux marquants, des expériences
@@ -260,24 +260,24 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-2 py-8 sm:px-6 sm:py-20 lg:px-8">
-        <div className="mx-auto grid max-w-7xl grid-cols-4 gap-1.5 sm:gap-4">
+      <section className="px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
           {stats.map((stat, index) => (
             <div
               key={stat.label}
-              className={`rounded-md border border-line bg-white p-2 text-center shadow-boss sm:rounded-boss sm:p-8 ${
+              className={`rounded-boss border border-line bg-white p-4 text-center shadow-boss sm:p-8 ${
                 index === 1 ? "card-tilt-2" : "card-tilt-1"
               }`}
             >
               <FeatureIcon icon={stat.icon} variant="stat" />
-              <p className="text-[12px] font-black text-ink sm:text-5xl">
+              <p className="text-3xl font-black text-ink sm:text-5xl">
                 {stat.value}
               </p>
-              <p className="mt-1 text-[4px] font-black uppercase tracking-[0.08em] text-muted sm:mt-4 sm:text-xs">
+              <p className="mt-3 text-[11px] font-black uppercase tracking-[0.08em] text-muted sm:mt-4 sm:text-xs">
                 {stat.label}
               </p>
               {stat.detail ? (
-                <p className="mt-1 text-[4px] leading-[1.35] text-muted/75 sm:mt-2 sm:text-sm">
+                <p className="mt-2 text-xs leading-5 text-muted/75 sm:text-sm">
                   {stat.detail}
                 </p>
               ) : null}
@@ -286,10 +286,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#f8f4f2] px-2 py-8 sm:px-6 sm:py-20 lg:px-8">
+      <section className="bg-[#f8f4f2] px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="mb-6 text-center sm:mb-10">
-            <h2 className="text-balance text-[13px] font-black leading-tight text-ink sm:text-5xl">
+            <h2 className="text-balance text-3xl font-black leading-tight text-ink sm:text-5xl">
               Des exp&eacute;riences{" "}
               <span className="sketch-circle mx-1 inline-block">uniques</span>
               pens&eacute;es pour les Boss.
@@ -314,13 +314,13 @@ export default function Home() {
                     <span className="block text-[15px] leading-none sm:text-2xl">
                       {card.day}
                     </span>
-                    <span className="mt-[3px] block text-[8px] uppercase leading-none sm:text-[11px]">
+                    <span className="mt-[3px] block text-[10px] uppercase leading-none sm:text-[11px]">
                       {card.month}
                     </span>
                   </div>
                 </div>
                 <div className="flex min-h-[230px] flex-col px-[23px] pb-[22px] pt-[24px] sm:p-9 md:justify-center lg:p-12">
-                  <p className="mb-[10px] flex items-center text-[8px] font-semibold text-[#111111] sm:mb-4 sm:text-sm">
+                  <p className="mb-[10px] flex items-center text-xs font-semibold text-[#111111] sm:mb-4 sm:text-sm">
                     <span className="mr-[5px] block size-[5px] rounded-full border border-[#fdc003] sm:mr-2 sm:size-2" />
                     {card.location}
                   </p>
@@ -332,7 +332,7 @@ export default function Home() {
                   </p>
                   <a
                     href={card.href}
-                    className="mt-6 inline-flex h-[34px] w-full items-center justify-center gap-[18px] rounded-full border border-[#e8e3df] bg-white px-3 text-[8px] font-black uppercase text-[#050505] transition hover:border-[#050505] focus:outline-none focus-visible:ring-4 focus-visible:ring-punch sm:h-12 sm:w-fit sm:px-7 sm:text-[11px]"
+                    className="mt-6 inline-flex h-11 w-full items-center justify-center gap-[18px] rounded-full border border-[#e8e3df] bg-white px-3 text-[10px] font-black uppercase text-[#050505] transition hover:border-[#050505] focus:outline-none focus-visible:ring-4 focus-visible:ring-punch sm:h-12 sm:w-fit sm:px-7 sm:text-[11px]"
                   >
                     D&eacute;couvrir l&apos;&eacute;v&eacute;nement
                     <span className="text-[17px] leading-none" aria-hidden="true">
@@ -346,25 +346,25 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-ink px-2 py-10 text-white sm:px-6 sm:py-24 lg:px-8">
+      <section className="relative overflow-hidden bg-ink px-4 py-14 text-white sm:px-6 sm:py-24 lg:px-8">
         <div className="absolute right-0 top-0 h-full w-2/5 translate-x-16 -skew-x-12 bg-punch/10" />
         <div className="relative mx-auto max-w-7xl">
           <div className="mx-auto mb-7 max-w-2xl text-center sm:mb-12">
-            <p className="mb-2 text-[5px] font-black uppercase tracking-[0.28em] text-punch sm:mb-4 sm:text-sm">
+            <p className="mb-3 text-xs font-black uppercase tracking-[0.28em] text-punch sm:mb-4 sm:text-sm">
               Pourquoi participer ?
             </p>
-            <h2 className="text-balance text-[13px] font-black leading-tight sm:text-5xl">
+            <h2 className="text-balance text-3xl font-black leading-tight sm:text-5xl">
               Plus qu&apos;une soirée, une expérience humaine.
             </h2>
           </div>
-          <div className="grid grid-cols-4 gap-2 sm:gap-8">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {reasons.map((reason) => (
               <div key={reason.title}>
                 <FeatureIcon icon={reason.icon} variant="principle" />
-                <h3 className="text-[6px] font-black leading-tight sm:text-xl">
+                <h3 className="text-xl font-black leading-tight">
                   {reason.title}
                 </h3>
-                <p className="mt-1 text-[4px] leading-[1.45] text-white/60 sm:mt-3 sm:text-sm sm:leading-6">
+                <p className="mt-3 text-sm leading-6 text-white/60">
                   {reason.text}
                 </p>
               </div>
@@ -373,31 +373,31 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-2 py-10 sm:px-6 sm:py-24 lg:px-8">
+      <section className="px-4 py-14 sm:px-6 sm:py-24 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="mb-6 text-center sm:mb-10">
-            <p className="mb-2 text-[5px] font-black uppercase tracking-[0.28em] text-ink sm:mb-4 sm:text-sm">
+            <p className="mb-3 text-xs font-black uppercase tracking-[0.28em] text-ink sm:mb-4 sm:text-sm">
               Expérience
             </p>
-            <h2 className="text-balance text-[13px] font-black text-ink sm:text-4xl">
+            <h2 className="text-balance text-3xl font-black text-ink sm:text-4xl">
               Des Boss conquis par l&apos;expérience.
             </h2>
           </div>
-          <div className="grid grid-cols-3 gap-1.5 sm:gap-5">
+          <div className="grid gap-4 sm:grid-cols-3 sm:gap-5">
             {promises.map((promise, index) => (
               <article
                 key={promise.title}
                 className={`rounded-boss border-t-4 ${
                   index === 1 ? "border-ink" : "border-punch"
-                } bg-white p-2 shadow-boss sm:p-6`}
+                } bg-white p-5 shadow-boss sm:p-6`}
               >
                 <p className="mb-1 text-lg font-black text-punch sm:mb-5 sm:text-4xl">
                   “
                 </p>
-                <h3 className="text-[7px] font-black leading-tight text-ink sm:text-lg">
+                <h3 className="text-lg font-black leading-tight text-ink">
                   {promise.title}
                 </h3>
-                <p className="mt-1 text-[4px] leading-[1.5] text-muted sm:mt-3 sm:text-sm sm:leading-6">
+                <p className="mt-3 text-sm leading-6 text-muted">
                   {promise.text}
                 </p>
               </article>
@@ -408,10 +408,10 @@ export default function Home() {
 
       <section className="px-4 py-10 sm:px-6 sm:py-24 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="mb-2 text-[5px] font-black uppercase tracking-[0.28em] text-ink sm:mb-4 sm:text-sm">
+          <p className="mb-3 text-xs font-black uppercase tracking-[0.28em] text-ink sm:mb-4 sm:text-sm">
             Une question ?
           </p>
-          <h2 className="text-balance text-[13px] font-black text-ink sm:text-4xl">
+          <h2 className="text-balance text-3xl font-black text-ink sm:text-4xl">
             Tout ce que vous devez savoir
           </h2>
           <div className="mx-auto mt-2 h-0.5 w-12 rounded-full bg-punch sm:mt-5 sm:h-1 sm:w-20" />
@@ -421,13 +421,13 @@ export default function Home() {
                 key={item.question}
                 className="group overflow-hidden rounded-md border border-line bg-white sm:rounded-boss"
               >
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-2.5 text-[6px] font-black text-ink sm:p-5 sm:text-sm">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-4 text-sm font-black text-ink sm:p-5">
                   {item.question}
                   <span className="text-punch transition group-open:rotate-45">
                     +
                   </span>
                 </summary>
-                <p className="border-t border-line/40 px-2.5 pb-2.5 pt-2 text-[5px] leading-[1.5] text-muted sm:px-5 sm:pb-5 sm:pt-4 sm:text-sm sm:leading-6">
+                <p className="border-t border-line/40 px-4 pb-4 pt-3 text-sm leading-6 text-muted sm:px-5 sm:pb-5 sm:pt-4">
                   {item.answer}
                 </p>
               </details>
@@ -436,15 +436,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-2 pb-10 sm:px-6 sm:pb-24 lg:px-8">
+      <section className="px-4 pb-14 sm:px-6 sm:pb-24 lg:px-8">
         <div className="relative mx-auto max-w-6xl overflow-hidden rounded-boss bg-ink px-4 py-9 text-center text-white sm:px-12 sm:py-20">
           <div className="absolute -left-5 -top-5 size-14 rounded-full border-[7px] border-punch/25 sm:-left-8 sm:-top-8 sm:size-24 sm:border-[10px]" />
           <div className="absolute -bottom-16 -right-16 size-44 rounded-full border-[22px] border-punch/10" />
           <div className="relative mx-auto max-w-3xl">
-            <h2 className="text-balance text-[16px] font-black uppercase leading-tight sm:text-6xl">
+            <h2 className="text-balance text-4xl font-black uppercase leading-tight sm:text-6xl">
               Prêt à vivre l&apos;expérience Les Boss ?
             </h2>
-            <p className="mx-auto mt-3 max-w-2xl text-[6px] leading-[1.65] text-white/70 sm:mt-5 sm:text-lg">
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-white/70 sm:mt-5 sm:text-lg">
               Le prochain rendez-vous vous attend : du business sérieux, des
               opportunités concrètes et une ambiance qui change vraiment du
               quotidien.
