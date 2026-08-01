@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #fcf9f8;
+  color: #1b1c1c;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+}
+
+::selection {
+  background: #fdc003;
+  color: #1b1c1c;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.boss-grid {
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(0, 0, 0, 0.05) 0%, transparent 34%),
+    radial-gradient(circle at 88% 82%, rgba(253, 192, 3, 0.13) 0%, transparent 38%);
+}
+
+.dynamic-gradient {
+  background:
+    radial-gradient(circle at 10% 20%, rgba(0, 0, 0, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(253, 192, 3, 0.05) 0%, transparent 40%),
+    #fcf9f8;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+.dot-pattern {
+  background-image: radial-gradient(#000000 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.sketch-underline {
+  position: relative;
+  z-index: 1;
+}
+
+.sketch-underline::after {
+  background: #fdc003;
+  border-radius: 6px;
+  bottom: 4px;
+  content: "";
+  height: 12px;
+  left: 0;
+  position: absolute;
+  transform: rotate(-1.5deg);
+  width: 100%;
+  z-index: -1;
+}
+
+.sketch-mark {
+  position: relative;
+}
+
+.sketch-mark::after {
+  background: #fdc003;
+  border-radius: 2px;
+  bottom: 0.08em;
+  content: "";
+  height: 0.42em;
+  left: -0.05em;
+  position: absolute;
+  transform: rotate(-1.6deg);
+  width: 108%;
+  z-index: -1;
+}
+
+.sketch-circle {
+  position: relative;
+  z-index: 1;
+}
+
+.sketch-circle::before {
+  border: 3px solid #fdc003;
+  border-radius: 45% 55% 50% 50% / 40% 40% 60% 60%;
+  content: "";
+  inset: -5px -12px;
+  position: absolute;
+  transform: rotate(-2deg);
+  z-index: -1;
+}
+
+.card-tilt-1 {
+  transform: rotate(-1deg);
+}
+
+.card-tilt-2 {
+  transform: rotate(1.2deg);
+}
+
+.card-tilt-3 {
+  transform: rotate(-1.4deg);
+}
+
+.card-tilt-1:hover,
+.card-tilt-2:hover,
+.card-tilt-3:hover {
+  transform: rotate(0deg) translateY(-2px);
+}
