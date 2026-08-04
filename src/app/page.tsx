@@ -188,9 +188,9 @@ export default function Home() {
               {siteConfig.mantra}
             </p>
             <h1 className="text-5xl font-black uppercase leading-[0.92] text-ink sm:text-6xl lg:text-7xl">
-               est sérieux.
+               Le business est sérieux.
               <span className="mt-1 block sm:mt-3">
-                Sauf{" "}
+                Pas{" "}
                 <span className="sketch-mark relative inline-block">l&apos;ambiance</span>
                 .
               </span>
