@@ -47,7 +47,7 @@ const stats = [
   {
     value: "3",
     label: "entrepreneurs à l'origine du projet",
-    detail: "Astrid (Tout shuss), Joris (GI photo) et Julien (Picqtures).",
+    detail: "Astrid (Tout schuss), Joris (GI photo) et Julien (Picqtures).",
     icon: UsersRound,
   },
   {
@@ -60,13 +60,13 @@ const stats = [
   {
     value: "100 %",
     label: "pensé pour les dirigeants",
-    detail: "Créer par des dirigeants,pour des dirigeants",
+    detail: "Créer par des dirigeants, pensé pour des dirigeants",
     icon: Handshake,
   },
   {
     value: "5 h",
     label: "de business sérieux. Pas l'ambiance.",
-    detail: "de 19h à minuit.(horaires sous reserve de conditions)",
+    detail: "de 19h à minuit.(horaires sous réserve de conditions)",
     icon: PartyPopper,
   },
 ];
@@ -142,7 +142,7 @@ const faq = [
   {
     question: "Est-ce une soirée de networking classique ?",
     answer:
-      "Non. Aucun tour de table ni échange forcé : les lieux, les expériences et l'ambiance favorisent naturellement les rencontres. Le business est sérieux. Sauf l'ambiance.",
+      "Non. Aucun tour de table ni échange forcé : les lieux, les expériences et l'ambiance favorisent naturellement les rencontres. Le business est sérieux. Pas l'ambiance.",
   },
   {
     question: "Peut-on venir seul ?",
@@ -188,7 +188,7 @@ export default function Home() {
               {siteConfig.mantra}
             </p>
             <h1 className="text-5xl font-black uppercase leading-[0.92] text-ink sm:text-6xl lg:text-7xl">
-              Le business est sérieux.
+               est sérieux.
               <span className="mt-1 block sm:mt-3">
                 Sauf{" "}
                 <span className="sketch-mark relative inline-block">l&apos;ambiance</span>

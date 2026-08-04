@@ -68,7 +68,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-white/10 px-4 py-5 text-center text-sm text-white/50 sm:py-6">
-        © {year} Les Boss. Le business est sérieux. Sauf l&apos;ambiance.
+        © {year} Les Boss.  est sérieux. Pas l&apos;ambiance.
       </div>
     </footer>
   );

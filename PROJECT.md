@@ -24,7 +24,7 @@ Positionnement :
 - legerement decale
 
 Mantra :
-Le business est serieux. Sauf l'ambiance.
+Le business est serieux. Pas l'ambiance.
 
 Actions prioritaires :
 - reserver une place pour le prochain evenement

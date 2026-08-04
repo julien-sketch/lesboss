@@ -92,7 +92,7 @@ export default function LesBossPage() {
           <div>
             
             <h2 className="text-balance text-4xl font-black sm:text-6xl">
-              Le business est sérieux. Sauf l&apos;ambiance.
+               est sérieux. Pas l&apos;ambiance.
             </h2>
           </div>
           <ButtonLink
