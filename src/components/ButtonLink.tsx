@@ -22,7 +22,7 @@ export function ButtonLink({
   className = "",
   ...props
 }: ButtonLinkProps) {
-  const classes = `inline-flex min-h-5 items-center justify-center rounded-full px-2 py-1 text-[6px] font-black uppercase tracking-[0.06em] transition duration-300 motion-reduce:transition-none sm:min-h-10 sm:px-5 sm:py-2 sm:text-[11px] ${variants[variant]} ${className}`;
+  const classes = `inline-flex min-h-12 items-center justify-center rounded-full px-6 py-3 text-xs font-black uppercase tracking-[0.06em] transition duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-punch focus-visible:ring-offset-2 motion-reduce:transition-none ${variants[variant]} ${className}`;
 
   if (href.startsWith("/")) {
     return (
