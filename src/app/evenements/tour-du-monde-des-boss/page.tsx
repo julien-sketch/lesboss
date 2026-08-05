@@ -8,14 +8,14 @@ const event = getEventBySlug("tour-du-monde-des-boss");
 export const metadata: Metadata = {
   title: "Tour du monde des Boss",
   description:
-    "Le 22 septembre dès 19 h chez Windalps à Méry : une soirée professionnelle et festive autour du voyage pour dirigeants locaux.",
+    "Le 22 septembre dès 19 h, dans un lieu tenu secret : une soirée professionnelle et festive autour du voyage pour dirigeants locaux.",
 };
 
 const flightDetails = [
-  { label: "Vol", value: "22 SEPT" },
+  { label: "Date", value: "22 SEPT" },
   { label: "Embarquement", value: "19:00" },
-  { label: "Départ", value: "CHY" },
-  { label: "Arrivée", value: "WDP" },
+  { label: "Lieu", value: "SECRET" },
+  { label: "Révélation", value: "BIENTÔT" },
 ];
 
 const boardingProgram = [
@@ -46,7 +46,7 @@ export default function TourDuMondePage() {
     <main className="overflow-hidden bg-[#070707] text-white">
       <section className="relative min-h-screen overflow-hidden px-4 py-8 sm:px-6 sm:py-16 lg:px-8">
         <Image
-          src="/images/tour-du-monde-affiche.svg"
+          src="/images/hero-les-boss.svg"
           alt=""
           fill
           priority
@@ -66,7 +66,7 @@ export default function TourDuMondePage() {
             </div>
 
             <p className="max-w-[75%] text-[10px] font-black uppercase tracking-[0.28em] text-white/45 sm:max-w-none sm:tracking-[0.5em]">
-              45° 38° 24° N · 5° 55° 10° E
+              Destination confidentielle · Révélation prochaine
             </p>
             <h1 className="mt-12 text-balance font-black uppercase leading-[0.92] tracking-[-0.02em] text-white text-[clamp(2.6rem,7vw,7.5rem)]">
               Le Tour du Monde
@@ -94,10 +94,10 @@ export default function TourDuMondePage() {
               </p>
               <div className="mt-2 flex flex-wrap items-end gap-3">
                 <p className="text-[clamp(2.7rem,6vw,6.5rem)] font-black uppercase leading-none tracking-[-0.04em]">
-                  Windalps
+                  Lieu secret
                 </p>
                 <span className="mb-2 bg-white/75 px-2 py-1 text-xl font-black uppercase text-[#1e1f25]">
-                  Méry
+                  Révélé aux inscrits
                 </span>
               </div>
             </div>
