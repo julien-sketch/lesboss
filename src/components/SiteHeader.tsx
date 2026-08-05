@@ -59,7 +59,7 @@ export function SiteHeader() {
 
         <div className="hidden sm:block">
           <ButtonLink href="/evenements/tour-du-monde-des-boss">
-            Réserver
+            Voir le 22 septembre
           </ButtonLink>
         </div>
 
@@ -98,7 +98,7 @@ export function SiteHeader() {
             href="/evenements/tour-du-monde-des-boss"
             className="mt-2 w-full"
           >
-            Découvrir l&apos;événement
+            Voir le prochain événement
           </ButtonLink>
         </div>
       </div>
