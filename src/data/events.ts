@@ -23,14 +23,13 @@ export const events: BossEvent[] = [
     title: "Tour du monde des Boss",
     date: "22 septembre",
     time: "19 h",
-    location: "Windalps, Méry, Savoie",
+    location: "Lieu tenu secret",
     shortDescription:
       "Une soirée professionnelle et festive autour du voyage, pensée pour les dirigeants et entrepreneurs locaux.",
     fullDescription:
       "Le Tour du monde des Boss réunit des dirigeants et entrepreneurs locaux autour du voyage, d'expériences originales et de rencontres qui comptent. Au programme annoncé : des échanges, un buffet inspiré de différentes destinations, une expérience de chute libre indoor, un spectacle, des animations interactives, des rencontres professionnelles et des surprises.",
-    image: "/images/tour-du-monde-des-boss.svg",
-    imageAlt:
-      "Illustration graphique de l'événement Tour du monde des Boss à Windalps",
+    image: "/images/hero-les-boss.svg",
+    imageAlt: "Dirigeants réunis lors d'un événement Les Boss",
     status: "prochainement",
     reservationUrl: siteConfig.reservationUrl,
     animations: [
