@@ -76,11 +76,11 @@ const experienceCards = [
     title: "Tour du Monde des Boss",
     day: "22",
     month: "SEPT.",
-    location: "Méry",
+    location: "Lieu tenu secret",
     description:
       "Une soirée professionnelle et festive autour du voyage, d'expériences originales et de rencontres qui comptent.",
-    image: "/images/tour-du-monde-des-boss.svg",
-    imageAlt: "Illustration de l'événement Tour du Monde des Boss à Méry",
+    image: "/images/hero-les-boss.svg",
+    imageAlt: "Dirigeants réunis lors d'un événement Les Boss",
     href: "/evenements/tour-du-monde-des-boss",
   },
 ];
@@ -127,7 +127,7 @@ const faq = [
   {
     question: "Les Boss, c'est quoi exactement ?",
     answer:
-      "Les Boss organise des événements professionnels originaux pour permettre aux dirigeants de faire du business autrement. Ce n'est ni un club d'affaires ni un réseau : chacun participe uniquement aux événements qui l'intéressent.",
+      "Les Boss organise des événements professionnels originaux pour permettre aux dirigeants de faire du business autrement. Ce n'est ni un club d'affaires ni un réseau : vous participez uniquement aux événements qui vous intéressent.",
   },
   {
     question: "À qui s'adressent les événements ?",
@@ -137,7 +137,7 @@ const faq = [
   {
     question: "Comment participer à un événement ?",
     answer:
-      "Consulte la page du prochain événement et clique sur le bouton de réservation. Toutes les informations pratiques te seront transmises après ton inscription.",
+      "Consultez la page du prochain événement, puis utilisez le bouton de réservation. Toutes les informations pratiques vous seront transmises après votre inscription.",
   },
   {
     question: "Est-ce une soirée de networking classique ?",
@@ -147,27 +147,17 @@ const faq = [
   {
     question: "Peut-on venir seul ?",
     answer:
-      "Oui, de nombreux participants viennent seuls. Les événements sont conçus pour faciliter les échanges dès l'arrivée.",
+      "Oui. De nombreux participants viennent seuls et les événements sont conçus pour faciliter les premiers échanges dès l'arrivée.",
   },
   {
     question: "Faut-il préparer un pitch commercial ?",
     answer:
-      "Non, aucun pitch n'est imposé. Tu présentes simplement ton activité au fil des conversations, de manière naturelle.",
+      "Non. Aucun pitch n'est imposé : vous présentez simplement votre activité au fil des conversations.",
   },
   {
     question: "Que comprend le prix d'entrée ?",
     answer:
       "Le contenu varie selon chaque événement : restauration, boissons, animations ou expériences. Tout ce qui est inclus ou proposé en supplément est précisé avant la réservation.",
-  },
-  {
-    question: "Puis-je venir si je ne connais personne ?",
-    answer:
-      "Oui, c'est justement l'occasion de faire de nouvelles rencontres. L'ambiance et les animations permettent d'engager facilement la conversation.",
-  },
-  {
-    question: "Comment devenir partenaire ?",
-    answer:
-      "Les partenaires peuvent bénéficier d'une visibilité avant, pendant et après l'événement. Contacte-nous pour recevoir le dossier et construire une présence adaptée à tes objectifs.",
   },
 ];
 
@@ -196,18 +186,21 @@ export default function Home() {
               </span>
             </h1>
             <p className="mt-6 max-w-xl text-base leading-7 text-muted sm:mt-7 sm:text-lg sm:leading-8">
-              Les Boss crée des événements professionnels originaux pour
-              permettre aux dirigeants de faire du business autrement, dans une
-              ambiance conviviale et décontractée.
+              Des événements professionnels pour dirigeants et entrepreneurs,
+              conçus pour créer des rencontres utiles sans pitch imposé, sans
+              tour de table et sans ambiance guindée.
             </p>
             <div className="mt-7 flex flex-wrap gap-3 sm:mt-8 sm:gap-4">
               <ButtonLink href="/evenements/tour-du-monde-des-boss">
-                Découvrir l&apos;événement
+                Voir l&apos;événement du 22 septembre
               </ButtonLink>
               <ButtonLink href="/les-boss" variant="secondary">
-                En savoir plus
+                Comprendre le concept
               </ButtonLink>
             </div>
+            <p className="mt-4 text-sm font-semibold text-muted">
+              Prochain rendez-vous : 22 septembre · Lieu tenu secret
+            </p>
           </div>
 
           <div className="relative z-10 min-w-0">
@@ -224,8 +217,8 @@ export default function Home() {
             </div>
             <div className="absolute -bottom-5 left-4 z-20 w-28 -rotate-6 rounded-lg border border-line bg-white p-3 shadow-boss sm:-bottom-9 sm:left-8 sm:w-36 sm:p-4">
               <Image
-                src="/images/tour-du-monde-des-boss.svg"
-                alt="Aperçu graphique du Tour du monde des Boss"
+                src="/images/hero-les-boss.svg"
+                alt="Aperçu d'un événement Les Boss"
                 width={220}
                 height={160}
                 className="h-16 w-full rounded-md object-cover sm:h-24"
@@ -445,16 +438,16 @@ export default function Home() {
               Prêt à vivre l&apos;expérience Les Boss ?
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-white/70 sm:mt-5 sm:text-lg">
-              Le prochain rendez-vous vous attend : du business sérieux, des
-              opportunités concrètes et une ambiance qui change vraiment du
-              quotidien.
+              Rendez-vous le 22 septembre dans un lieu tenu secret pour
+              rencontrer des dirigeants de cinq départements, dans une ambiance
+              qui facilite vraiment les échanges.
             </p>
             <div className="mt-5 flex justify-center gap-2 sm:mt-8 sm:gap-3">
-              <ButtonLink href="/contact" variant="secondary">
-                Nous contacter
-              </ButtonLink>
               <ButtonLink href={`/evenements/${nextEvent.slug}`} variant="dark">
-                Découvrir l&apos;événement
+                Voir le programme du 22 septembre
+              </ButtonLink>
+              <ButtonLink href="/contact" variant="secondary">
+                Poser une question
               </ButtonLink>
             </div>
           </div>
