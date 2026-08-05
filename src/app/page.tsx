@@ -46,27 +46,27 @@ function FeatureIcon({ icon: Icon, variant }: FeatureIconProps) {
 const stats = [
   {
     value: "3",
-    label: "entrepreneurs à l'origine du projet",
-    detail: "Astrid (Tout schuss), Joris (GI photo) et Julien (Picqtures).",
+    label: "dirigeants à l'origine du projet",
+    detail: "Astrid, Joris et Julien connaissent la réalité de l'entrepreneuriat.",
     icon: UsersRound,
   },
   {
     value: "5",
-    label: "départements réunis",
+    label: "territoires connectés",
     detail: "Savoie, Haute-Savoie, Isère, Ain et Rhône.",
     icon: Map,
   },
   
   {
     value: "100 %",
-    label: "pensé pour les dirigeants",
-    detail: "Créer par des dirigeants, pensé pour des dirigeants",
+    label: "conçu pour les dirigeants",
+    detail: "Créé par des dirigeants, pensé pour des dirigeants.",
     icon: Handshake,
   },
   {
     value: "5 h",
-    label: "de business sérieux. Pas l'ambiance.",
-    detail: "de 19h à minuit.(horaires sous réserve de conditions)",
+    label: "pour rencontrer autrement",
+    detail: "De 19 h à minuit, sans pitch imposé ni tour de table.",
     icon: PartyPopper,
   },
 ];
@@ -108,18 +108,21 @@ const reasons = [
   },
 ];
 
-const promises = [
+const differences = [
   {
-    title: "Une expérience vivante",
-    text: "Des formats pensés pour que les échanges démarrent naturellement.",
+    number: "01",
+    title: "Vous venez comme vous êtes",
+    text: "Pas de pitch préparé, pas de tour de table, pas de badge qui vous enferme dans une fonction.",
   },
   {
-    title: "Un ton direct",
-    text: "Du business, des opportunités, et juste ce qu'il faut de décalage.",
+    number: "02",
+    title: "Les échanges démarrent seuls",
+    text: "Le lieu, les expériences et le rythme de la soirée créent naturellement les conversations.",
   },
   {
-    title: "Un ancrage local",
-    text: "Un événement pensé pour les dirigeants du territoire alpin.",
+    number: "03",
+    title: "Vous repartez avec du concret",
+    text: "De nouveaux contacts, des idées et des opportunités — sans sacrifier le plaisir d'être là.",
   },
 ];
 
@@ -137,7 +140,7 @@ const faq = [
   {
     question: "Comment participer à un événement ?",
     answer:
-      "Consulte la page du prochain événement et clique sur le bouton de réservation. Toutes les informations pratiques te seront transmises après ton inscription.",
+      "Consultez la page du prochain événement puis utilisez le bouton de réservation. Toutes les informations pratiques vous seront transmises après votre inscription.",
   },
   {
     question: "Est-ce une soirée de networking classique ?",
@@ -152,17 +155,12 @@ const faq = [
   {
     question: "Faut-il préparer un pitch commercial ?",
     answer:
-      "Non, aucun pitch n'est imposé. Tu présentes simplement ton activité au fil des conversations, de manière naturelle.",
+      "Non, aucun pitch n'est imposé. Vous présentez simplement votre activité au fil des conversations, de manière naturelle.",
   },
   {
     question: "Que comprend le prix d'entrée ?",
     answer:
       "Le contenu varie selon chaque événement : restauration, boissons, animations ou expériences. Tout ce qui est inclus ou proposé en supplément est précisé avant la réservation.",
-  },
-  {
-    question: "Puis-je venir si je ne connais personne ?",
-    answer:
-      "Oui, c'est justement l'occasion de faire de nouvelles rencontres. L'ambiance et les animations permettent d'engager facilement la conversation.",
   },
   {
     question: "Comment devenir partenaire ?",
@@ -196,18 +194,21 @@ export default function Home() {
               </span>
             </h1>
             <p className="mt-6 max-w-xl text-base leading-7 text-muted sm:mt-7 sm:text-lg sm:leading-8">
-              Les Boss crée des événements professionnels originaux pour
-              permettre aux dirigeants de faire du business autrement, dans une
-              ambiance conviviale et décontractée.
+              Des soirées professionnelles pour dirigeants et entrepreneurs
+              où les rencontres se font naturellement — sans pitch imposé,
+              sans tour de table et sans ambiance guindée.
             </p>
             <div className="mt-7 flex flex-wrap gap-3 sm:mt-8 sm:gap-4">
               <ButtonLink href="/evenements/tour-du-monde-des-boss">
-                Découvrir l&apos;événement
+                Voir le prochain événement
               </ButtonLink>
               <ButtonLink href="/les-boss" variant="secondary">
-                En savoir plus
+                Comprendre le concept
               </ButtonLink>
             </div>
+            <p className="mt-4 text-sm font-semibold text-muted">
+              Prochain rendez-vous : 22 septembre · Windalps, Méry
+            </p>
           </div>
 
           <div className="relative z-10 min-w-0">
@@ -248,14 +249,12 @@ export default function Home() {
             Présentation
           </p>
           <h2 className="text-balance text-3xl font-black leading-tight text-ink sm:text-5xl">
-            Créer des moments qui{" "}
-            <span className="sketch-underline">comptent vraiment</span>.
+            Rencontrer les bonnes personnes, sans forcer les rencontres.
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-muted sm:mt-6 sm:text-lg sm:leading-8">
-            Les Boss crée des événements professionnels où les dirigeants se
-            rencontrent, échangent et développent des opportunités dans une
-            ambiance décontractée. Des lieux marquants, des expériences
-            originales sans les codes habituels.
+            Nous remplaçons les codes du networking par des lieux marquants,
+            des expériences partagées et une ambiance qui donne réellement
+            envie d&apos;échanger.
           </p>
         </div>
       </section>
@@ -290,9 +289,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-6 text-center sm:mb-10">
             <h2 className="text-balance text-3xl font-black leading-tight text-ink sm:text-5xl">
-              Des exp&eacute;riences{" "}
-              <span className="sketch-circle mx-1 inline-block">uniques</span>
-              pens&eacute;es pour les Boss.
+              Votre prochain prétexte pour faire du business autrement.
             </h2>
           </div>
 
@@ -334,7 +331,7 @@ export default function Home() {
                     href={card.href}
                     className="mt-6 inline-flex h-11 w-full items-center justify-center gap-[18px] rounded-full border border-[#e8e3df] bg-white px-3 text-[10px] font-black uppercase text-[#050505] transition hover:border-[#050505] focus:outline-none focus-visible:ring-4 focus-visible:ring-punch sm:h-12 sm:w-fit sm:px-7 sm:text-[11px]"
                   >
-                    D&eacute;couvrir l&apos;&eacute;v&eacute;nement
+                    Voir le programme et les conditions
                     <span className="text-[17px] leading-none" aria-hidden="true">
                       &rarr;
                     </span>
@@ -354,7 +351,7 @@ export default function Home() {
               Pourquoi participer ?
             </p>
             <h2 className="text-balance text-3xl font-black leading-tight sm:text-5xl">
-              Plus qu&apos;une soirée, une expérience humaine.
+              Une soirée qui facilite ce que les événements classiques compliquent.
             </h2>
           </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -377,28 +374,28 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-6 text-center sm:mb-10">
             <p className="mb-3 text-xs font-black uppercase tracking-[0.28em] text-ink sm:mb-4 sm:text-sm">
-              Expérience
+              La différence Les Boss
             </p>
             <h2 className="text-balance text-3xl font-black text-ink sm:text-4xl">
-              Des Boss conquis par l&apos;expérience.
+              Ici, personne ne vous demande de « networker ».
             </h2>
           </div>
           <div className="grid gap-4 sm:grid-cols-3 sm:gap-5">
-            {promises.map((promise, index) => (
+            {differences.map((difference, index) => (
               <article
-                key={promise.title}
+                key={difference.title}
                 className={`rounded-boss border-t-4 ${
                   index === 1 ? "border-ink" : "border-punch"
                 } bg-white p-5 shadow-boss sm:p-6`}
               >
-                <p className="mb-1 text-lg font-black text-punch sm:mb-5 sm:text-4xl">
-                  “
+                <p className="mb-4 text-sm font-black tracking-[0.2em] text-punch">
+                  {difference.number}
                 </p>
                 <h3 className="text-lg font-black leading-tight text-ink">
-                  {promise.title}
+                  {difference.title}
                 </h3>
                 <p className="mt-3 text-sm leading-6 text-muted">
-                  {promise.text}
+                  {difference.text}
                 </p>
               </article>
             ))}
@@ -445,16 +442,16 @@ export default function Home() {
               Prêt à vivre l&apos;expérience Les Boss ?
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-white/70 sm:mt-5 sm:text-lg">
-              Le prochain rendez-vous vous attend : du business sérieux, des
-              opportunités concrètes et une ambiance qui change vraiment du
-              quotidien.
+              Le 22 septembre, retrouvez des dirigeants de cinq départements
+              chez Windalps à Méry. Venez seul ou accompagné : tout est pensé
+              pour que les premiers échanges soient simples.
             </p>
             <div className="mt-5 flex justify-center gap-2 sm:mt-8 sm:gap-3">
-              <ButtonLink href="/contact" variant="secondary">
-                Nous contacter
-              </ButtonLink>
               <ButtonLink href={`/evenements/${nextEvent.slug}`} variant="dark">
-                Découvrir l&apos;événement
+                Voir le programme du 22 septembre
+              </ButtonLink>
+              <ButtonLink href="/contact" variant="secondary">
+                Poser une question
               </ButtonLink>
             </div>
           </div>
