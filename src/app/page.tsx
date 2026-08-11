@@ -108,18 +108,23 @@ const reasons = [
   },
 ];
 
-const promises = [
+const testimonials = [
   {
-    title: "Une expérience vivante",
-    text: "Des formats pensés pour que les échanges démarrent naturellement.",
+    quote:
+      "Une très belle soirée dans un lieu remarquable, avec des entrepreneurs locaux et de vrais moments d’échange. L’ambiance était parfaitement équilibrée : détendue, professionnelle et portée par des animations réussies. Bravo aux organisateurs !",
+    author: "Joris Servais",
+    role: "Metteur en Scène de Votre Patrimoine",
   },
   {
-    title: "Un ton direct",
-    text: "Du business, des opportunités, et juste ce qu'il faut de décalage.",
+    quote:
+      "Une excellente soirée blanche dans un cadre exceptionnel, avec une vue magnifique sur le lac et la chaîne de l’Épine. Des échanges intéressants, une ambiance conviviale et une démonstration d’hypnose spectaculaire. Vivement la prochaine !",
+    author: "Julien",
+    role: "Ju’Elec",
   },
   {
-    title: "Un ancrage local",
-    text: "Un événement pensé pour les dirigeants du territoire alpin.",
+    quote:
+      "Une soirée professionnelle qui sort vraiment de l’ordinaire. Les échanges se font naturellement, dans une ambiance chaleureuse et décontractée, tout en restant propice aux rencontres et aux opportunités. Une expérience réussie que je recommande aux dirigeants du territoire.",
+    author: "Témoignage à venir",
   },
 ];
 
@@ -377,22 +382,26 @@ export default function Home() {
             </h2>
           </div>
           <div className="grid gap-4 sm:grid-cols-3 sm:gap-5">
-            {promises.map((promise, index) => (
+            {testimonials.map((testimonial, index) => (
               <article
-                key={promise.title}
-                className={`rounded-boss border-t-4 ${
+                key={testimonial.author}
+                className={`flex h-full min-h-[300px] flex-col rounded-boss border-t-4 ${
                   index === 1 ? "border-ink" : "border-punch"
                 } bg-white p-5 shadow-boss sm:p-6`}
               >
-                <p className="mb-1 text-lg font-black text-punch sm:mb-5 sm:text-4xl">
-                  “
+                <p className="text-sm leading-6 text-muted">
+                  « {testimonial.quote} »
                 </p>
-                <h3 className="text-lg font-black leading-tight text-ink">
-                  {promise.title}
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-muted">
-                  {promise.text}
-                </p>
+                <div className="mt-auto pt-6">
+                  <h3 className="text-lg font-black leading-tight text-ink">
+                    {testimonial.author}
+                  </h3>
+                  {testimonial.role ? (
+                    <p className="mt-2 text-sm font-semibold leading-5 text-muted">
+                      {testimonial.role}
+                    </p>
+                  ) : null}
+                </div>
               </article>
             ))}
           </div>
