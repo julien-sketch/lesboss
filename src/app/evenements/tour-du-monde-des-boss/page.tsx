@@ -46,7 +46,7 @@ export default function TourDuMondePage() {
     <main className="overflow-hidden bg-[#070707] text-white">
       <section className="relative min-h-screen overflow-hidden px-4 py-8 sm:px-6 sm:py-16 lg:px-8">
         <Image
-          src="/images/hero-les-boss.svg"
+          src="/images/fond-event.svg"
           alt=""
           fill
           priority

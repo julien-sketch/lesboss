@@ -7,13 +7,10 @@ export const siteConfig = {
   reservationUrl: "#reservation",
   partnerDeckUrl: "#contact",
   socialLinks: [
-    {
-      label: "LinkedIn",
-      href: "#",
-    },
+    
     {
       label: "Instagram",
-      href: "#",
+      href: "https://www.instagram.com/lesboss.event/",
     },
   ],
 };

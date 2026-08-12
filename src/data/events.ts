@@ -28,7 +28,7 @@ export const events: BossEvent[] = [
       "Une soirée professionnelle et festive autour du voyage, pensée pour les dirigeants et entrepreneurs locaux.",
     fullDescription:
       "Le Tour du monde des Boss réunit des dirigeants et entrepreneurs locaux autour du voyage, d'expériences originales et de rencontres qui comptent. Au programme annoncé : des échanges, un buffet inspiré de différentes destinations, une expérience de chute libre indoor, un spectacle, des animations interactives, des rencontres professionnelles et des surprises.",
-    image: "/images/hero-les-boss.svg",
+    image: "/images/fond-event.svg",
     imageAlt: "Dirigeants réunis lors d'un événement Les Boss",
     status: "prochainement",
     reservationUrl: siteConfig.reservationUrl,
