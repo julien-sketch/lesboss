@@ -8,14 +8,14 @@ const event = getEventBySlug("tour-du-monde-des-boss");
 export const metadata: Metadata = {
   title: "Tour du monde des Boss",
   description:
-    "Le 22 septembre dès 19 h, dans un lieu tenu secret : une soirée professionnelle et festive autour du voyage pour dirigeants locaux.",
+    "Le 22 septembre dès 19 h, à Windalps, à Méry : une soirée professionnelle et festive autour du voyage pour dirigeants locaux.",
 };
 
 const flightDetails = [
   { label: "Date", value: "22 SEPT" },
   { label: "Embarquement", value: "19:00" },
-  { label: "Lieu", value: "SECRET" },
-  { label: "Révélation", value: "Le 17 août" },
+  { label: "Lieu", value: "WINDALPS" },
+  { label: "Ville", value: "MÉRY" },
 ];
 
 const boardingProgram = [
@@ -76,7 +76,7 @@ export default function TourDuMondePage() {
             </div>
 
             <p className="max-w-[75%] text-[10px] font-black uppercase tracking-[0.28em] text-white/45 sm:max-w-none sm:tracking-[0.5em]">
-              Destination confidentielle · Révélation prochaine
+              Destination confirmée · Windalps à Méry
             </p>
             <h1 className="mt-12 text-balance font-black uppercase leading-[0.92] tracking-[-0.02em] text-white text-[clamp(2.6rem,7vw,7.5rem)]">
               Le Tour du Monde
@@ -104,10 +104,10 @@ export default function TourDuMondePage() {
               </p>
               <div className="mt-2 flex flex-wrap items-end gap-3">
                 <p className="text-[clamp(2.7rem,6vw,6.5rem)] font-black uppercase leading-none tracking-[-0.04em]">
-                  Lieu secret
+                  Windalps
                 </p>
                 <span className="mb-2 bg-white/75 px-2 py-1 text-xl font-black uppercase text-[#1e1f25]">
-                  Révélé le 17 août
+                  Méry
                 </span>
               </div>
             </div>
@@ -137,19 +137,12 @@ export default function TourDuMondePage() {
                   </span>
                 </p>
                 <p className="mt-6 max-w-xl text-lg font-black uppercase leading-7 text-white">
-                  Une seule soirée. Des professionnels de tous horizons. Et de
+                  Une soirée. Des professionnels de tous horizons. Et de
                   nombreuses occasions de créer des connexions utiles.
                 </p>
               </div>
 
               <div className="space-y-4">
-                <div className="flex items-center justify-between gap-5">
-                  <div className="h-12 flex-1 bg-[repeating-linear-gradient(90deg,#fff_0_3px,transparent_3px_7px)] opacity-90" />
-                  <span className="text-[10px] font-black uppercase tracking-[0.25em] text-white/55">
-                    Boarding pass
-                  </span>
-                </div>
-
                 <div>
                   <p className="text-[12px] font-black uppercase tracking-[0.2em] text-white/55">
                     Votre billet comprend :
@@ -168,6 +161,12 @@ export default function TourDuMondePage() {
                 </div>
 
                 <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                  <div className="flex w-full items-center justify-between gap-2 pt-8 pb-1">
+                    <div className="h-10 flex-1 bg-[repeating-linear-gradient(90deg,#fff_0_3px,transparent_3px_7px)] opacity-90" />
+                    <span className="text-[10px] font-black uppercase tracking-[0.25em] text-white/55">
+                      Boarding pass
+                    </span>
+                  </div>
                   <button
                     className="inline-flex min-h-12 cursor-not-allowed items-center justify-center bg-white/70 px-6 py-3 text-sm font-black uppercase tracking-[0.18em] text-[#101114] opacity-80"
                     type="button"
@@ -175,10 +174,6 @@ export default function TourDuMondePage() {
                   >
                     Billetterie ouverte le 19 août
                   </button>
-                  <p className="flex min-h-12 items-center text-sm font-bold uppercase leading-6 text-white/70">
-                    Les réservations ouvriront le 19 août. Les places seront
-                    limitées.
-                  </p>
                   <a
                     href="/partenaires"
                     className="inline-flex min-h-12 items-center justify-center border border-white/40 px-6 py-3 text-sm font-black uppercase tracking-[0.18em] text-white transition hover:border-white hover:bg-white/10"
