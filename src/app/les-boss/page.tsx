@@ -33,6 +33,35 @@ const pillars = [
   },
 ];
 
+type Organizer = {
+  firstName: string;
+  name: string;
+  role: string;
+  proof?: string;
+  bio: string;
+};
+
+const organizers: Organizer[] = [
+  {
+    firstName: "Astrid",
+    name: "Astrid Goryn",
+    role: "Fondatrice de Tout Schuss",
+    bio: "Productrice événementielle basée à Aix-les-Bains, Astrid accompagne la conception, la production et la coordination d'événements professionnels, culturels et festifs. Habituée à gérer les prestataires, la logistique, les partenaires et la communication, elle apporte aux Boss son expérience du terrain et son exigence organisationnelle.",
+  },
+  {
+    firstName: "Joris",
+    name: "Joris Peres",
+    role: "Fondateur de GI Photo",
+    bio: "Photographe et vidéaste professionnel basé à Chambéry, Joris accompagne les entreprises et les organisateurs d'événements dans la création de contenus visuels. Reportage corporate et borne photo : il apporte aux Boss son regard créatif, son expérience de l'événementiel et sa capacité à transformer chaque soirée en souvenirs durables.",
+  },
+  {
+    firstName: "Julien",
+    name: "Julien Veyrac",
+    role: "Fondateur de Picqtures",
+    bio: "Entrepreneur et fondateur de Picqtures, la conciergerie dédiée aux dirigeants d'entreprise, Julien accompagne quotidiennement des décideurs dans leurs besoins professionnels et personnels. Il apporte aux Boss sa connaissance des attentes des dirigeants, son sens du service et sa capacité à créer des relations de confiance.",
+  },
+];
+
 export default function LesBossPage() {
   return (
     <main>
@@ -83,6 +112,70 @@ export default function LesBossPage() {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden bg-cloud/70 px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+        <div className="dot-pattern absolute inset-0 opacity-[0.04]" />
+        <div className="absolute right-0 top-0 h-full w-2/5 translate-x-20 -skew-x-12 bg-punch/20" />
+        <div className="relative mx-auto max-w-7xl">
+          <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
+            <div>
+              <p className="mb-4 inline-flex rounded-full bg-punch px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-ink">
+                Présentation des organisateurs
+              </p>
+              <h2 className="text-balance text-4xl font-black uppercase leading-tight text-ink sm:text-6xl">
+                Trois entrepreneurs, une même conviction
+              </h2>
+            </div>
+            <div>
+              <p className="text-base font-bold leading-7 text-muted sm:text-lg sm:leading-8">
+                Astrid, Joris et Julien ont créé Les Boss avec une idée simple :
+                les rencontres professionnelles sont plus efficaces lorsqu&apos;elles
+                se déroulent dans une ambiance naturelle, vivante et sans
+                posture.
+              </p>
+              <p className="mt-4 text-base font-bold leading-7 text-muted sm:text-lg sm:leading-8">
+                Leurs expertises complémentaires — événementiel, création
+                visuelle et accompagnement des dirigeants — permettent
+                d&apos;imaginer des expériences professionnelles sérieuses dans leur
+                objectif, mais jamais dans leur ambiance.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-12 grid gap-5 lg:grid-cols-3">
+            {organizers.map((organizer, index) => (
+              <article
+                key={organizer.name}
+                className={`flex h-full flex-col rounded-boss border border-line bg-white p-6 shadow-boss sm:p-8 ${
+                  index === 1 ? "lg:mt-8" : ""
+                }`}
+              >
+                <p className="text-xs font-black uppercase tracking-[0.22em] text-muted">
+                  {organizer.firstName}
+                </p>
+                <div className="mt-5 border-l-4 border-punch pl-4">
+                  <h3 className="text-2xl font-black leading-tight text-ink sm:text-3xl">
+                    {organizer.name}
+                  </h3>
+                  <p className="mt-2 text-sm font-black uppercase tracking-[0.12em] text-muted">
+                    {organizer.role}
+                  </p>
+                </div>
+
+                {organizer.proof ? (
+                  <p className="mt-6 bg-ink px-4 py-4 text-sm font-bold leading-6 text-white">
+                    {organizer.proof}
+                  </p>
+                ) : null}
+
+                <p className="mt-6 text-sm leading-7 text-muted sm:text-base">
+                  {organizer.bio}
+                </p>
+              </article>
+            ))}
           </div>
         </div>
       </section>

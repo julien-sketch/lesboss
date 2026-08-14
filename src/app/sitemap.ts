@@ -9,6 +9,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/partenaires",
     "/contact",
     "/mentions-legales",
+    "/politique-de-confidentialite",
+    "/conditions-generales-de-vente",
+    "/evenements/soiree-blanche-adelphia",
   ];
 
   return [

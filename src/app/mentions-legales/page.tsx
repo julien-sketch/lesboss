@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
@@ -112,15 +113,6 @@ export default function LegalPage() {
               <p>Numéro de TVA intracommunautaire : FR27 937954212</p>
               <p>Adresse électronique : {mailLink}</p>
             </InfoBlock>
-            <p>
-              Avant publication, vérifier ces informations à partir de l’Annuaire des entreprises ou
-              d’un extrait officiel récent.
-            </p>
-            <p>
-              Le numéro de téléphone professionnel de VPTC n’a pas encore été communiqué. Ne pas en
-              inventer.
-            </p>
-            {/* TODO: ajouter le numéro de téléphone professionnel de VPTC avant la publication définitive. */}
           </LegalSection>
 
           <LegalSection title="Directeur de la publication">
@@ -146,12 +138,6 @@ export default function LegalPage() {
                   Tout Schuss peut notamment assurer, selon l’événement, l’organisation
                   administrative des réservations, l’encaissement des paiements et la facturation.
                 </p>
-                <p>
-                  Avant publication, vérifier la forme juridique, l’adresse, l’immatriculation et le
-                  numéro de TVA à partir d’un document officiel récent. Ne pas présenter
-                  automatiquement l’entreprise comme inscrite au RCS si cette mention n’est pas
-                  confirmée.
-                </p>
               </LegalSubsection>
 
               <LegalSubsection title="Gi Photo">
@@ -171,10 +157,6 @@ export default function LegalPage() {
                   <code className="rounded bg-cloud px-1.5 py-1 text-sm text-ink">lesboss.fr</code>,
                   de l’adresse <strong className="text-ink">bonjour@lesboss.fr</strong> et des
                   données transmises par le formulaire de contact.
-                </p>
-                <p>
-                  Avant publication, vérifier ces informations à partir de l’Annuaire des entreprises
-                  ou d’un extrait officiel récent.
                 </p>
               </LegalSubsection>
             </div>
@@ -209,10 +191,6 @@ export default function LegalPage() {
               vente et la politique de confidentialité applicables à la plateforme et au vendeur
               concernés.
             </p>
-            <p>
-              Ne pas présenter systématiquement Tout Schuss, Weezevent ou le lieu d’accueil comme
-              vendeur pour tous les événements.
-            </p>
           </LegalSection>
 
           <LegalSection title="Hébergement">
@@ -234,15 +212,6 @@ export default function LegalPage() {
                 </a>
               </p>
             </InfoBlock>
-            <p>
-              Avant publication, vérifier les coordonnées légales actuelles de Vercel dans sa
-              documentation juridique officielle.
-            </p>
-            <p>
-              Si un numéro de téléphone officiel et vérifié de l’hébergeur est disponible, l’ajouter.
-              Dans le cas contraire, ne pas en inventer.
-            </p>
-            {/* TODO: confirmer les coordonnées complètes de l’hébergeur avant la publication définitive. */}
           </LegalSection>
 
           <LegalSection title="Propriété intellectuelle">
@@ -312,10 +281,15 @@ export default function LegalPage() {
             <p>
               Les modalités détaillées concernant les données collectées, leurs finalités, leur base
               légale, leurs destinataires, leur durée de conservation et les droits des personnes
-              doivent être présentées dans une page distincte intitulée « Politique de
-              confidentialité ».
+              sont présentées dans la{" "}
+              <Link
+                className="font-black text-ink underline decoration-punch decoration-2 underline-offset-4"
+                href="/politique-de-confidentialite"
+              >
+                politique de confidentialité
+              </Link>
+              .
             </p>
-            {/* TODO: créer puis activer le lien vers la politique de confidentialité. */}
             <p>
               Pour toute question concernant les données personnelles ou pour exercer ses droits,
               l’utilisateur peut écrire à : <strong>{mailLink}</strong>
@@ -337,12 +311,10 @@ export default function LegalPage() {
 
           <LegalSection title="Cookies">
             <p>
-              Le site peut utiliser des cookies strictement nécessaires à son fonctionnement.
-            </p>
-            <p>
-              Si des outils de mesure d’audience, des vidéos intégrées, des cartes, des pixels
-              publicitaires ou d’autres services déposant des cookies non essentiels sont présents,
-              leur utilisation doit être soumise au consentement préalable de l’utilisateur.
+              Le site n&apos;utilise actuellement aucun cookie publicitaire, outil
+              de mesure d&apos;audience ou traceur nécessitant le consentement de
+              l&apos;utilisateur. Des cookies strictement nécessaires au
+              fonctionnement technique du site peuvent toutefois être utilisés.
             </p>
           </LegalSection>
 

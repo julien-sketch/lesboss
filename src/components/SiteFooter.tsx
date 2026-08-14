@@ -57,6 +57,22 @@ export function SiteFooter() {
                 Mentions légales
               </Link>
             </li>
+            <li>
+              <Link
+                className="text-base text-white/78 hover:text-white"
+                href="/politique-de-confidentialite"
+              >
+                Politique de confidentialité
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="text-base text-white/78 hover:text-white"
+                href="/conditions-generales-de-vente"
+              >
+                Conditions générales de vente
+              </Link>
+            </li>
             {siteConfig.socialLinks.map((link) => (
               <li key={link.label}>
                 <a className="text-base text-white/78 hover:text-white" href={link.href}>
@@ -68,7 +84,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-white/10 px-4 py-5 text-center text-sm text-white/50 sm:py-6">
-        © {year} Les Boss.  est sérieux. Pas l&apos;ambiance.
+        © {year} Les Boss. Le business est sérieux. Pas l&apos;ambiance.
       </div>
     </footer>
   );

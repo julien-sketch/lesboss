@@ -15,7 +15,7 @@ const flightDetails = [
   { label: "Date", value: "22 SEPT" },
   { label: "Embarquement", value: "19:00" },
   { label: "Lieu", value: "SECRET" },
-  { label: "Révélation", value: "BIENTÔT" },
+  { label: "Révélation", value: "Le 17 août" },
 ];
 
 const boardingProgram = [
@@ -35,6 +35,16 @@ const boardingProgram = [
     title: "Animations",
     text: "Partagez, réagissez et connectez-vous autrement.",
   },
+];
+
+const ticketIncludes = [
+  "l'entrée à la soirée",
+  "les boissons",
+  "le buffet du monde",
+  "l'accès aux animations",
+  "le stationnement sur place",
+  "plusieurs surprises au cours de la soirée",
+  "cinq heures de rencontres et d'échanges dans une ambiance décontractée",
 ];
 
 export default function TourDuMondePage() {
@@ -59,7 +69,7 @@ export default function TourDuMondePage() {
         <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#070707] to-transparent" />
 
         <div className="relative z-10 mx-auto flex min-h-[calc(100vh-4rem)] max-w-7xl items-end justify-end lg:items-center">
-          <div className="relative w-full max-w-3xl overflow-hidden rounded-[24px] border border-white/15 bg-[#07111f]/62 p-5 shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur-[3px] sm:rounded-[28px] sm:p-8 lg:p-10">
+          <div className="relative w-full max-w-7xl overflow-hidden rounded-[24px] border border-white/15 bg-[#07111f]/62 p-5 shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur-[3px] sm:rounded-[28px] sm:p-8 lg:p-10">
             <div className="pointer-events-none absolute inset-x-8 top-7 h-px bg-white/25" />
             <div className="pointer-events-none absolute right-8 top-7 text-[10px] font-black uppercase tracking-[0.45em] text-white/35">
               Boarding pass
@@ -97,7 +107,7 @@ export default function TourDuMondePage() {
                   Lieu secret
                 </p>
                 <span className="mb-2 bg-white/75 px-2 py-1 text-xl font-black uppercase text-[#1e1f25]">
-                  Révélé aux inscrits
+                  Révélé le 17 août
                 </span>
               </div>
             </div>
@@ -115,16 +125,20 @@ export default function TourDuMondePage() {
               ))}
             </div>
 
-            <div className="mt-12 grid gap-6 border-t border-white/15 pt-8 md:grid-cols-[0.82fr_1.18fr] md:items-end">
+            <div className="mt-12 grid gap-8 border-t border-white/15 pt-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
               <div>
                 <p className="text-[12px] font-black uppercase tracking-[0.2em] text-white/55">
-                  Entrée
+                  Votre boarding pass
                 </p>
-                <p className="mt-1 flex items-end gap-2 text-6xl font-black leading-none sm:text-7xl">
-                  45€
-                  <span className="mb-2 bg-white px-2 py-1 text-lg uppercase text-[#1e1f25]">
-                    /pers
+                <p className="mt-3 flex flex-wrap items-end gap-3 text-6xl font-black leading-none sm:text-7xl">
+                  45 €
+                  <span className="mb-2 bg-white px-2 py-1 text-base uppercase text-[#1e1f25] sm:text-lg">
+                    HT / personne
                   </span>
+                </p>
+                <p className="mt-6 max-w-xl text-lg font-black uppercase leading-7 text-white">
+                  Une seule soirée. Des professionnels de tous horizons. Et de
+                  nombreuses occasions de créer des connexions utiles.
                 </p>
               </div>
 
@@ -135,13 +149,36 @@ export default function TourDuMondePage() {
                     Boarding pass
                   </span>
                 </div>
+
+                <div>
+                  <p className="text-[12px] font-black uppercase tracking-[0.2em] text-white/55">
+                    Votre billet comprend :
+                  </p>
+                  <ul className="mt-4 grid gap-3 md:grid-cols-2">
+                    {ticketIncludes.map((item) => (
+                      <li
+                        key={item}
+                        className="flex gap-3 border-l border-white/15 bg-white/[0.04] px-4 py-3 text-sm font-bold uppercase leading-6 text-white/82"
+                      >
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 bg-white" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
                 <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                  <a
-                    href={event.reservationUrl}
-                    className="inline-flex min-h-12 items-center justify-center bg-white px-6 py-3 text-sm font-black uppercase tracking-[0.18em] text-[#101114] transition hover:bg-[#ff7fa6] hover:text-white"
+                  <button
+                    className="inline-flex min-h-12 cursor-not-allowed items-center justify-center bg-white/70 px-6 py-3 text-sm font-black uppercase tracking-[0.18em] text-[#101114] opacity-80"
+                    type="button"
+                    disabled
                   >
-                    Réserver ma place
-                  </a>
+                    Billetterie ouverte le 19 août
+                  </button>
+                  <p className="flex min-h-12 items-center text-sm font-bold uppercase leading-6 text-white/70">
+                    Les réservations ouvriront le 19 août. Les places seront
+                    limitées.
+                  </p>
                   <a
                     href="/partenaires"
                     className="inline-flex min-h-12 items-center justify-center border border-white/40 px-6 py-3 text-sm font-black uppercase tracking-[0.18em] text-white transition hover:border-white hover:bg-white/10"

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { ButtonLink } from "@/components/ButtonLink";
 import { SectionHeader } from "@/components/SectionHeader";
-import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Partenaires",
@@ -37,7 +36,7 @@ export default function PartnersPage() {
             />
           </div>
           <div className="lg:col-span-4 lg:flex lg:justify-end">
-            <ButtonLink href={siteConfig.partnerDeckUrl}>
+            <ButtonLink href="/contact">
               Recevoir le dossier partenaire
             </ButtonLink>
           </div>

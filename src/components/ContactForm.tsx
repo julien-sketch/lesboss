@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { FormEvent, useState } from "react";
 
 const successMessage = "Votre message a bien été envoyé. Nous vous répondrons rapidement.";
@@ -60,11 +61,13 @@ export function ContactForm() {
     <form
       className="rounded-boss bg-white p-6 shadow-boss sm:p-8"
       aria-label="Formulaire de contact"
+      method="post"
+      action="/api/contact"
       onSubmit={handleSubmit}
     >
       <div className="grid gap-5 md:grid-cols-2">
         <label className="block">
-          <span className="font-bold text-ink">Nom</span>
+          <span className="font-bold text-ink">Nom *</span>
           <input
             className="mt-2 w-full rounded-2xl border-ink/15"
             name="name"
@@ -74,7 +77,7 @@ export function ContactForm() {
           />
         </label>
         <label className="block">
-          <span className="font-bold text-ink">Entreprise</span>
+          <span className="font-bold text-ink">Entreprise *</span>
           <input
             className="mt-2 w-full rounded-2xl border-ink/15"
             name="company"
@@ -84,7 +87,7 @@ export function ContactForm() {
           />
         </label>
         <label className="block">
-          <span className="font-bold text-ink">Email</span>
+          <span className="font-bold text-ink">Email *</span>
           <input
             className="mt-2 w-full rounded-2xl border-ink/15"
             name="email"
@@ -96,6 +99,9 @@ export function ContactForm() {
         </label>
         <label className="block">
           <span className="font-bold text-ink">Téléphone</span>
+          <span className="mt-1 block text-xs font-semibold text-muted">
+            Facultatif
+          </span>
           <input
             className="mt-2 w-full rounded-2xl border-ink/15"
             name="phone"
@@ -112,11 +118,11 @@ export function ContactForm() {
       </label>
 
       <label className="mt-5 block">
-        <span className="font-bold text-ink">Objet</span>
+        <span className="font-bold text-ink">Objet *</span>
         <input className="mt-2 w-full rounded-2xl border-ink/15" name="subject" maxLength={160} required />
       </label>
       <label className="mt-5 block">
-        <span className="font-bold text-ink">Message</span>
+        <span className="font-bold text-ink">Message *</span>
         <textarea
           className="mt-2 min-h-40 w-full rounded-2xl border-ink/15"
           name="message"
@@ -130,6 +136,19 @@ export function ContactForm() {
           J&apos;accepte d&apos;être recontacté au sujet de ma demande.
         </span>
       </label>
+      <p className="mt-4 text-sm font-semibold leading-6 text-ink/64">
+        Les informations transmises sont utilisées par SC COM — Gi Photo pour
+        répondre à votre demande. Les champs marqués d&apos;un astérisque sont
+        obligatoires. Pour en savoir plus sur la gestion de vos données et
+        exercer vos droits, consultez notre{" "}
+        <Link
+          className="font-black text-ink underline decoration-punch decoration-2 underline-offset-4"
+          href="/politique-de-confidentialite"
+        >
+          politique de confidentialité
+        </Link>
+        .
+      </p>
       <button
         className="mt-7 inline-flex min-h-12 items-center justify-center rounded-full bg-ink px-6 py-3 text-sm font-black uppercase text-white transition hover:bg-punch hover:text-ink focus:outline-none focus-visible:ring-4 focus-visible:ring-punch focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:bg-ink disabled:hover:text-white motion-reduce:transition-none"
         type="submit"

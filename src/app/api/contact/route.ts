@@ -24,6 +24,27 @@ type ContactPayload = {
 
 const genericError = { message: "Une erreur est survenue." };
 
+async function readPayload(request: Request): Promise<ContactPayload> {
+  const contentType = request.headers.get("content-type") ?? "";
+
+  if (contentType.includes("application/json")) {
+    return (await request.json()) as ContactPayload;
+  }
+
+  const formData = await request.formData();
+
+  return {
+    name: formData.get("name"),
+    company: formData.get("company"),
+    email: formData.get("email"),
+    phone: formData.get("phone"),
+    subject: formData.get("subject"),
+    message: formData.get("message"),
+    consent: formData.get("consent") === "on",
+    website: formData.get("website"),
+  };
+}
+
 function readString(value: unknown, maxLength: number) {
   if (typeof value !== "string") {
     return "";
@@ -56,7 +77,7 @@ function emailRow(label: string, value: string) {
 
 export async function POST(request: Request) {
   try {
-    const payload = (await request.json()) as ContactPayload;
+    const payload = await readPayload(request);
 
     const website = readString(payload.website, FIELD_LIMITS.website);
     if (website) {

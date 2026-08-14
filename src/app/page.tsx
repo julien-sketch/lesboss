@@ -1,12 +1,8 @@
 import Image from "next/image";
 import {
-  ExternalLink,
   Handshake,
   Map,
-  Martini,
   PartyPopper,
-  Sparkles,
-  Users,
   UsersRound,
   type LucideIcon,
 } from "lucide-react";
@@ -73,6 +69,19 @@ const stats = [
 
 const experienceCards = [
   {
+    title: "Soirée blanche des Boss",
+    day: "26",
+    month: "JUIN",
+    location: "Hôtel Adelphia",
+    description:
+      "Retour sur une soirée professionnelle au bord du lac, avec rencontres, ambiance blanche et moments marquants.",
+    image: "/images/experience-cards/cassis-yacht.png",
+    imageAlt:
+      "Ambiance élégante au bord de l'eau pour une soirée Les Boss",
+    href: "/evenements/soiree-blanche-adelphia",
+    tag: "Événement passé",
+  },
+  {
     title: "Tour du Monde des Boss",
     day: "22",
     month: "SEPT.",
@@ -82,29 +91,51 @@ const experienceCards = [
     image: "/images/hero-les-boss.svg",
     imageAlt: "Dirigeants réunis lors d'un événement Les Boss",
     href: "/evenements/tour-du-monde-des-boss",
+    tag: "Prochain événement",
   },
 ];
 
-const reasons = [
+const whyParticipateReasons = [
+  "développer votre réseau local et régional",
+  "rencontrer de futurs clients, partenaires ou prescripteurs",
+  "échanger directement avec des dirigeants et des décideurs",
+  "découvrir des professionnels que vous n'auriez probablement pas rencontrés ailleurs",
+  "faire émerger des opportunités dans une ambiance naturelle et décontractée",
+  "vivre une expérience différente des réseaux professionnels traditionnels",
+];
+
+const audienceProfiles = [
+  "Dirigeants",
+  "Fondateurs",
+  "Cadres décisionnaires",
+  "Indépendants",
+  "Freelances",
+  "Entrepreneurs",
+  "TPE",
+  "PME",
+  "Grands groupes",
+];
+
+const participationCards = [
   {
-    title: "Créer des opportunités",
-    text: "Faire émerger des projets, des idées et des échanges concrets.",
-    icon: Sparkles,
+    title: "Développer son réseau",
+    text: "Rencontrez des pairs, échangez vos problématiques et élargissez votre cercle d'influence naturellement.",
+    icon: UsersRound,
   },
   {
-    title: "Garder le plaisir",
-    text: "Une ambiance décontractée, mais une intention très professionnelle.",
-    icon: Martini,
+    title: "Vivre le moment",
+    text: "Des formats d'événements créatifs, conviviaux et mémorables loin des salles de conférence austères.",
+    icon: PartyPopper,
   },
   {
-    title: "Sortir du cadre",
-    text: "Des événements qui changent des rendez-vous professionnels classiques.",
-    icon: ExternalLink,
+    title: "S'inspirer mutuellement",
+    text: "Échangez, collaborez et grandissez ensemble grâce au partage d'expériences sans filtre.",
+    icon: Handshake,
   },
   {
-    title: "Réunir les bons profils",
-    text: "Des dirigeants, entrepreneurs et décideurs dans un même lieu.",
-    icon: Users,
+    title: "Sortir du quotidien",
+    text: "Le business est sérieux, pas l'ambiance. Offrez-vous une parenthèse stimulante pour votre activité.",
+    icon: Map,
   },
 ];
 
@@ -118,13 +149,14 @@ const testimonials = [
   {
     quote:
       "Une excellente soirée blanche dans un cadre exceptionnel, avec une vue magnifique sur le lac et la chaîne de l’Épine. Des échanges intéressants, une ambiance conviviale et une démonstration d’hypnose spectaculaire. Vivement la prochaine !",
-    author: "Julien",
+    author: "Julien Mithieux",
     role: "Ju’Elec",
   },
   {
     quote:
       "Une soirée professionnelle qui sort vraiment de l’ordinaire. Les échanges se font naturellement, dans une ambiance chaleureuse et décontractée, tout en restant propice aux rencontres et aux opportunités. Une expérience réussie que je recommande aux dirigeants du territoire.",
-    author: "Témoignage à venir",
+    author: "Flavien Saly Rattin",
+    role: "Sr rénovation",
   },
 ];
 
@@ -294,11 +326,11 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="flex justify-center">
+          <div className="grid gap-6 lg:grid-cols-2">
             {experienceCards.map((card) => (
               <article
                 key={card.title}
-                className="grid w-full overflow-hidden rounded-[18px] bg-white shadow-none md:min-h-[360px] md:grid-cols-[1.1fr_0.9fr]"
+                className="grid w-full overflow-hidden rounded-[18px] bg-white shadow-none md:min-h-[360px] md:grid-cols-[1.04fr_0.96fr]"
               >
                 <div className="relative h-[190px] overflow-hidden rounded-t-[18px] md:h-full md:min-h-[360px] md:rounded-l-[18px] md:rounded-tr-none">
                   <Image
@@ -318,6 +350,9 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex min-h-[230px] flex-col px-[23px] pb-[22px] pt-[24px] sm:p-9 md:justify-center lg:p-12">
+                  <p className="mb-[10px] w-fit bg-ink px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-white">
+                    {card.tag}
+                  </p>
                   <p className="mb-[10px] flex items-center text-xs font-semibold text-[#111111] sm:mb-4 sm:text-sm">
                     <span className="mr-[5px] block size-[5px] rounded-full border border-[#fdc003] sm:mr-2 sm:size-2" />
                     {card.location}
@@ -345,28 +380,118 @@ export default function Home() {
       </section>
 
       <section className="relative overflow-hidden bg-ink px-4 py-14 text-white sm:px-6 sm:py-24 lg:px-8">
-        <div className="absolute right-0 top-0 h-full w-2/5 translate-x-16 -skew-x-12 bg-punch/10" />
-        <div className="relative mx-auto max-w-7xl">
-          <div className="mx-auto mb-7 max-w-2xl text-center sm:mb-12">
-            <p className="mb-3 text-xs font-black uppercase tracking-[0.28em] text-punch sm:mb-4 sm:text-sm">
-              Pourquoi participer ?
-            </p>
+        <div className="absolute right-0 top-0 h-full w-2/5 translate-x-16 -skew-x-12 bg-punch/15" />
+        <div className="relative mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.96fr_1.04fr] lg:items-center lg:gap-14">
+          <div>
             <h2 className="text-balance text-3xl font-black leading-tight sm:text-5xl">
-              Plus qu&apos;une soirée, une expérience humaine.
+              Pourquoi{" "}
+              <span className="sketch-underline text-punch">participer ?</span>
             </h2>
+            <p className="mt-5 max-w-2xl text-lg font-black leading-7 text-punch sm:text-2xl sm:leading-9">
+              Des rencontres qui peuvent réellement faire avancer votre
+              activité.
+            </p>
+            <p className="mt-5 max-w-2xl text-sm font-semibold leading-6 text-white/72 sm:text-base sm:leading-7">
+              Les soirées Les Boss réunissent des professionnels venus de cinq
+              départements et issus de secteurs très différents. Des événements
+              pensés pour :
+            </p>
+
+            <ul className="mt-6 space-y-3">
+              {whyParticipateReasons.map((reason) => (
+                <li
+                  key={reason}
+                  className="flex gap-3 text-sm font-bold leading-6 text-white/88"
+                >
+                  <span className="mt-1.5 grid size-5 shrink-0 place-items-center rounded-full bg-punch text-[11px] font-black text-ink">
+                    ✓
+                  </span>
+                  <span>{reason}</span>
+                </li>
+              ))}
+            </ul>
+
+            <p className="mt-7 max-w-2xl rounded-md border-l-4 border-punch bg-white/10 px-5 py-4 text-sm font-semibold italic leading-6 text-white/76">
+              Ici, pas de pitch imposé, pas de tour de table et pas de
+              networking rigide. Les échanges se créent naturellement, autour
+              d&apos;expériences qui donnent envie de discuter.
+            </p>
           </div>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {reasons.map((reason) => (
-              <div key={reason.title}>
-                <FeatureIcon icon={reason.icon} variant="principle" />
-                <h3 className="text-xl font-black leading-tight">
-                  {reason.title}
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-white/60">
-                  {reason.text}
-                </p>
-              </div>
+
+          <div className="grid gap-4 sm:grid-cols-2 sm:gap-5">
+            {participationCards.map((card, index) => {
+              const Icon = card.icon;
+
+              return (
+                <article
+                  key={card.title}
+                  className={`rounded-boss border border-white/10 bg-white/[0.06] p-6 backdrop-blur transition duration-300 hover:border-punch/50 hover:bg-punch/10 ${
+                    index % 2 === 1 ? "sm:mt-10" : ""
+                  }`}
+                >
+                  <Icon aria-hidden="true" className="size-7 text-punch" />
+                  <h3 className="mt-5 text-lg font-black leading-tight text-white">
+                    {card.title}
+                  </h3>
+                  <p className="mt-3 text-sm font-semibold leading-6 text-white/62">
+                    {card.text}
+                  </p>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden bg-[#f8f4f2] px-4 py-14 sm:px-6 sm:py-24 lg:px-8">
+        <div className="absolute -right-20 -top-20 size-80 rounded-full bg-punch/10 blur-3xl" />
+        <div className="relative mx-auto max-w-7xl">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="text-balance text-3xl font-black leading-tight text-ink sm:text-5xl">
+              À qui s&apos;adressent les soirées{" "}
+              <span className="sketch-circle mx-1 inline-block">Les Boss</span>{" "}
+              ?
+            </h2>
+            <p className="mx-auto mt-5 max-w-2xl text-base font-semibold leading-7 text-muted sm:text-lg sm:leading-8">
+              À tous les professionnels qui souhaitent développer leur réseau
+              autrement.
+            </p>
+            <p className="mx-auto mt-4 max-w-3xl text-sm leading-6 text-muted/80 sm:text-base sm:leading-7">
+              Dirigeants, fondateurs, cadres décisionnaires, indépendants,
+              freelances, entrepreneurs, TPE, PME ou représentants de grands
+              groupes : tous les profils professionnels sont les bienvenus.
+            </p>
+          </div>
+
+          <div className="mx-auto mt-8 flex max-w-4xl flex-wrap justify-center gap-2 sm:gap-3">
+            {audienceProfiles.map((profile) => (
+              <span
+                key={profile}
+                className="rounded-full border border-line bg-white px-4 py-2 text-[11px] font-black uppercase tracking-[0.08em] text-ink shadow-[0_10px_30px_rgba(5,5,5,0.04)] sm:px-5"
+              >
+                {profile}
+              </span>
             ))}
+          </div>
+
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
+            <article className="rounded-boss border border-line bg-white p-6 shadow-[0_16px_45px_rgba(5,5,5,0.05)] sm:p-8">
+              <Map aria-hidden="true" className="size-7 text-punch" />
+              <p className="mt-5 text-sm font-semibold leading-7 text-muted sm:text-base">
+                Les événements réunissent principalement des participants venus
+                de Savoie, Haute-Savoie, Isère, Ain et Rhône, mais ils restent
+                ouverts aux professionnels de tous les territoires et de tous
+                les secteurs d&apos;activité.
+              </p>
+            </article>
+            <article className="rounded-boss border border-line bg-white p-6 shadow-[0_16px_45px_rgba(5,5,5,0.05)] sm:p-8">
+              <Handshake aria-hidden="true" className="size-7 text-punch" />
+              <p className="mt-5 text-sm font-semibold leading-7 text-muted sm:text-base">
+                Vous pouvez venir pour développer votre activité, trouver de
+                nouveaux partenaires, rencontrer des décideurs ou simplement
+                élargir votre réseau professionnel dans un cadre différent.
+              </p>
+            </article>
           </div>
         </div>
       </section>
