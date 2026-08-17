@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import {
+  AudioLines,
+  Eye,
+  Sparkles,
+  Utensils,
+  UsersRound,
+  Wine,
+} from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 
 export const metadata: Metadata = {
@@ -11,7 +19,7 @@ export const metadata: Metadata = {
 const eventFacts = [
   { label: "Date", value: "26 juin 2025" },
   { label: "Lieu", value: "Hôtel Adelphia" },
-  { label: "Format", value: "Soirée blanche" },
+  { label: "Participants", value: "90 dirigeants" },
   { label: "Ambiance", value: "Business sérieux, cadre détendu" },
 ];
 
@@ -24,16 +32,53 @@ const highlights = [
 
 const gallery = [
   {
-    src: "/images/experience-cards/cassis-yacht.png",
-    alt: "Ambiance au bord de l'eau pour une soirée professionnelle Les Boss",
+    src: "/images/adelphia-paysage.svg",
+    alt: "Ambiance au bord de l'eau pour une soirée professionnelle",
   },
   {
-    src: "/images/experience-cards/marseille-dinner.png",
+    src: "/images/soiree-blanche.svg",
     alt: "Professionnels réunis autour d'un dîner convivial",
   },
   {
-    src: "/images/hero-les-boss.svg",
-    alt: "Dirigeants réunis lors d'un événement Les Boss",
+    src: "/images/paysage-adelphia.svg",
+    alt: "Dirigeants réunis lors d'un événement entrepreneur",
+  },
+];
+
+const experienceCards = [
+  {
+    title: "Caviar & champagne",
+    text: "Une dégustation premium pour ouvrir les échanges autour de saveurs rares, de bulles et d'un vrai moment de partage.",
+    icon: Wine,
+  },
+  {
+    title: "Découverte sonore d'oeuvres d'art",
+    text: "Une expérience artistique et sensorielle pour faire sortir les discussions du cadre habituel.",
+    icon: AudioLines,
+    dark: true,
+  },
+  {
+    title: "Hypnotiseurs",
+    text: "Des interventions surprenantes, pensées pour marquer la soirée et créer des souvenirs communs entre participants.",
+    icon: Eye,
+  },
+];
+
+const extraAnimations = [
+  {
+    title: "Buffet",
+    text: "Un buffet généreux pour prolonger les échanges sans interrompre le rythme de la soirée.",
+    icon: Utensils,
+  },
+  {
+    title: "Bar à paillettes",
+    text: "Une touche festive, légère et parfaitement dans l'esprit Les Boss.",
+    icon: Sparkles,
+  },
+  {
+    title: "90 dirigeants réunis",
+    text: "Une soirée à taille humaine, avec des décideurs venus pour rencontrer, discuter et créer du lien.",
+    icon: UsersRound,
   },
 ];
 
@@ -63,8 +108,8 @@ export default function SoireeBlancheAdelphiaPage() {
 
           <div className="relative min-h-[320px] overflow-hidden rounded-boss bg-white shadow-boss sm:min-h-[460px]">
             <Image
-              src="/images/experience-cards/cassis-yacht.png"
-              alt="Ambiance au bord du lac pour la soirée blanche des Boss"
+              src="/images/adelphia-paysage.svg"
+              alt="Ambiance au bord du lac pour la soirée blanche des entrepreneurs"
               fill
               priority
               sizes="(min-width: 1024px) 52vw, 100vw"
@@ -131,6 +176,114 @@ export default function SoireeBlancheAdelphiaPage() {
         </div>
       </section>
 
+      <section className="bg-[#f8f4f2] px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto mb-12 max-w-3xl text-center sm:mb-16">
+            <p className="text-sm font-black uppercase tracking-[0.24em] text-muted">
+              Activités
+            </p>
+            <h2 className="mt-4 text-balance text-3xl font-black leading-tight text-ink sm:text-5xl">
+              Une soirée rythmée par des expériences qui font parler.
+            </h2>
+            <p className="mx-auto mt-5 max-w-2xl text-base font-semibold leading-7 text-muted sm:text-lg sm:leading-8">
+              Caviar, champagne, art, hypnose, buffet et animations : la soirée
+              blanche Adelphia a réuni 90 dirigeants autour d&apos;un format
+              premium, vivant et simple à vivre.
+            </p>
+          </div>
+
+          <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-12">
+            <div className="grid gap-6">
+              {experienceCards.map((card, index) => {
+                const Icon = card.icon;
+
+                return (
+                  <article
+                    key={card.title}
+                    className={`relative overflow-hidden rounded-boss border p-6 shadow-boss sm:p-8 ${
+                      card.dark
+                        ? "border-ink bg-ink text-white"
+                        : "border-line bg-white text-ink"
+                    } ${index === 1 ? "lg:ml-12" : ""}`}
+                  >
+                    <div className="mb-5 grid size-12 place-items-center rounded-full bg-punch text-ink">
+                      <Icon aria-hidden="true" className="size-6" />
+                    </div>
+                    <h3
+                      className={`text-2xl font-black leading-tight ${
+                        card.dark ? "text-punch" : "text-ink"
+                      }`}
+                    >
+                      {card.title}
+                    </h3>
+                    <p
+                      className={`mt-4 text-sm font-semibold leading-6 sm:text-base sm:leading-7 ${
+                        card.dark ? "text-white/72" : "text-muted"
+                      }`}
+                    >
+                      {card.text}
+                    </p>
+                  </article>
+                );
+              })}
+            </div>
+
+            <div className="grid gap-6 sm:grid-cols-2 lg:pt-10">
+              <figure className="overflow-hidden rounded-boss bg-white p-3 shadow-boss sm:col-span-2">
+                <div className="relative aspect-[16/10] overflow-hidden rounded-[12px]">
+                  <Image
+                    src="/images/adelphia-paysage.svg"
+                    alt="Vue de l'Hôtel Adelphia et ambiance de la soirée blanche"
+                    fill
+                    sizes="(min-width: 1024px) 46vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+              </figure>
+
+              <figure className="overflow-hidden rounded-boss bg-white p-3 shadow-boss sm:mt-10">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-[12px]">
+                  <Image
+                    src="/images/aix.svg"
+                    alt="Buffet et échanges entre professionnels"
+                    fill
+                    sizes="(min-width: 1024px) 22vw, 50vw"
+                    className="object-cover"
+                  />
+                </div>
+              </figure>
+
+              <div className="rounded-boss border border-line bg-white p-6 shadow-boss">
+                <p className="text-xs font-black uppercase tracking-[0.2em] text-muted">
+                  Et plus encore
+                </p>
+                <ul className="mt-5 space-y-5">
+                  {extraAnimations.map((item) => {
+                    const Icon = item.icon;
+
+                    return (
+                      <li key={item.title} className="flex gap-4">
+                        <span className="grid size-9 shrink-0 place-items-center rounded-full bg-punch text-ink">
+                          <Icon aria-hidden="true" className="size-4" />
+                        </span>
+                        <span>
+                          <strong className="block text-sm font-black uppercase leading-tight text-ink">
+                            {item.title}
+                          </strong>
+                          <span className="mt-1 block text-sm font-semibold leading-6 text-muted">
+                            {item.text}
+                          </span>
+                        </span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-[#f8f4f2] px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="mb-8 max-w-3xl">
@@ -143,14 +296,12 @@ export default function SoireeBlancheAdelphiaPage() {
           </div>
 
           <div className="grid gap-5 md:grid-cols-3">
-            {gallery.map((photo, index) => (
+            {gallery.map((photo) => (
               <figure
                 key={photo.src}
-                className={`overflow-hidden rounded-boss bg-white shadow-boss ${
-                  index === 1 ? "md:mt-10" : ""
-                }`}
+                className="overflow-hidden rounded-boss bg-white p-3 shadow-boss"
               >
-                <div className="relative aspect-[4/3]">
+                <div className="relative aspect-[16/10] overflow-hidden rounded-[12px]">
                   <Image
                     src={photo.src}
                     alt={photo.alt}

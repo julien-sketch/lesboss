@@ -23,11 +23,11 @@ export const events: BossEvent[] = [
     title: "Tour du monde des Boss",
     date: "22 septembre",
     time: "19 h",
-    location: "Lieu tenu secret",
+    location: "Windalps à Méry",
     shortDescription:
-      "Une soirée professionnelle et festive autour du voyage, pensée pour les dirigeants et entrepreneurs locaux.",
+      "Une soirée professionnelle et festive autour du voyage, pensée pour les dirigeants et entrepreneurs locaux, à Windalps à Méry.",
     fullDescription:
-      "Le Tour du monde des Boss réunit des dirigeants et entrepreneurs locaux autour du voyage, d'expériences originales et de rencontres qui comptent. Au programme annoncé : des échanges, un buffet inspiré de différentes destinations, une expérience de chute libre indoor, un spectacle, des animations interactives, des rencontres professionnelles et des surprises.",
+      "Le Tour du monde des Boss réunit des dirigeants et entrepreneurs locaux à Windalps à Méry autour du voyage, d'expériences originales et de rencontres qui comptent. Au programme annoncé : des échanges, un buffet inspiré de différentes destinations, une expérience de chute libre indoor, un spectacle, des animations interactives, des rencontres professionnelles et des surprises.",
     image: "/images/fond-event.svg",
     imageAlt: "Dirigeants réunis lors d'un événement Les Boss",
     status: "prochainement",

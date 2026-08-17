@@ -56,12 +56,12 @@ const stats = [
   {
     value: "100 %",
     label: "pensé pour les dirigeants",
-    detail: "Créer par des dirigeants, pensé pour des dirigeants",
+    detail: "Créé par des dirigeants, pensé pour des dirigeants",
     icon: Handshake,
   },
   {
     value: "5 h",
-    label: "de business sérieux. Pas l'ambiance.",
+    label: "d'ambiance festive.",
     detail: "de 19h à minuit.(horaires sous réserve de conditions)",
     icon: PartyPopper,
   },
@@ -75,7 +75,7 @@ const experienceCards = [
     location: "Hôtel Adelphia",
     description:
       "Retour sur une soirée professionnelle au bord du lac, avec rencontres, ambiance blanche et moments marquants.",
-    image: "/images/experience-cards/cassis-yacht.png",
+    image: "/images/adelphia.svg",
     imageAlt:
       "Ambiance élégante au bord de l'eau pour une soirée Les Boss",
     href: "/evenements/soiree-blanche-adelphia",
@@ -85,10 +85,10 @@ const experienceCards = [
     title: "Tour du Monde des Boss",
     day: "22",
     month: "SEPT.",
-    location: "Lieu tenu secret",
+    location: "Windalps à Méry",
     description:
       "Une soirée professionnelle et festive autour du voyage, d'expériences originales et de rencontres qui comptent.",
-    image: "/images/hero-les-boss.svg",
+    image: "/images/fond-event.svg",
     imageAlt: "Dirigeants réunis lors d'un événement Les Boss",
     href: "/evenements/tour-du-monde-des-boss",
     tag: "Prochain événement",
@@ -99,7 +99,6 @@ const whyParticipateReasons = [
   "développer votre réseau local et régional",
   "rencontrer de futurs clients, partenaires ou prescripteurs",
   "échanger directement avec des dirigeants et des décideurs",
-  "découvrir des professionnels que vous n'auriez probablement pas rencontrés ailleurs",
   "faire émerger des opportunités dans une ambiance naturelle et décontractée",
   "vivre une expérience différente des réseaux professionnels traditionnels",
 ];
@@ -119,17 +118,17 @@ const audienceProfiles = [
 const participationCards = [
   {
     title: "Développer son réseau",
-    text: "Rencontrez des pairs, échangez vos problématiques et élargissez votre cercle d'influence naturellement.",
+    text: "Rencontrez des professionnels, échangez vos problématiques et élargissez votre cercle d'influence naturellement.",
     icon: UsersRound,
   },
   {
     title: "Vivre le moment",
-    text: "Des formats d'événements créatifs, conviviaux et mémorables loin des salles de conférence austères.",
+    text: "Des formats d'événements créatifs, conviviaux et mémorables loin des salles de conférence.",
     icon: PartyPopper,
   },
   {
     title: "S'inspirer mutuellement",
-    text: "Échangez, collaborez et grandissez ensemble grâce au partage d'expériences sans filtre.",
+    text: "Échangez, collaborez et grandissez ensemble grâce au partage d'expériences.",
     icon: Handshake,
   },
   {
@@ -236,7 +235,7 @@ export default function Home() {
               </ButtonLink>
             </div>
             <p className="mt-4 text-sm font-semibold text-muted">
-              Prochain rendez-vous : 22 septembre · Lieu tenu secret
+              Prochain rendez-vous : 22 septembre · Windalps à Méry
             </p>
           </div>
 
@@ -379,20 +378,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-ink px-4 py-14 text-white sm:px-6 sm:py-24 lg:px-8">
-        <div className="absolute right-0 top-0 h-full w-2/5 translate-x-16 -skew-x-12 bg-punch/15" />
-        <div className="relative mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.96fr_1.04fr] lg:items-center lg:gap-14">
+      <section className="relative overflow-hidden bg-ink px-4 py-16 text-white sm:px-6 sm:py-24 lg:px-8">
+        <div className="absolute right-0 top-0 h-full w-2/5 translate-x-16 -skew-x-12 bg-punch/12" />
+        <div className="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.98fr_1.02fr] lg:items-center lg:gap-16">
           <div>
-            <h2 className="text-balance text-3xl font-black leading-tight sm:text-5xl">
+            <h2 className="max-w-3xl text-4xl font-black leading-[1.08] text-white sm:text-5xl lg:text-6xl">
               Pourquoi{" "}
-              <span className="sketch-underline text-punch">participer ?</span>
+              <span className="mt-2 inline-flex w-fit -rotate-1 bg-punch px-3 py-1 text-ink shadow-[8px_8px_0_rgba(255,255,255,0.1)] sm:mt-0 sm:px-4">
+                participer ?
+              </span>
             </h2>
             <p className="mt-5 max-w-2xl text-lg font-black leading-7 text-punch sm:text-2xl sm:leading-9">
               Des rencontres qui peuvent réellement faire avancer votre
               activité.
             </p>
             <p className="mt-5 max-w-2xl text-sm font-semibold leading-6 text-white/72 sm:text-base sm:leading-7">
-              Les soirées Les Boss réunissent des professionnels venus de cinq
+              Les soirées Les Boss réunissent des professionnels venus de plusieurs
               départements et issus de secteurs très différents. Des événements
               pensés pour :
             </p>
@@ -572,7 +573,7 @@ export default function Home() {
               Prêt à vivre l&apos;expérience Les Boss ?
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-white/70 sm:mt-5 sm:text-lg">
-              Rendez-vous le 22 septembre dans un lieu tenu secret pour
+              Rendez-vous le 22 septembre à Windalps, à Méry, pour
               rencontrer des dirigeants de cinq départements, dans une ambiance
               qui facilite vraiment les échanges.
             </p>

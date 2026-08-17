@@ -52,7 +52,7 @@ const organizers: Organizer[] = [
     firstName: "Joris",
     name: "Joris Peres",
     role: "Fondateur de GI Photo",
-    bio: "Photographe et vidéaste professionnel basé à Chambéry, Joris accompagne les entreprises et les organisateurs d'événements dans la création de contenus visuels. Reportage corporate et borne photo : il apporte aux Boss son regard créatif, son expérience de l'événementiel et sa capacité à transformer chaque soirée en souvenirs durables.",
+    bio: "Photographe professionnel basé à Chambéry, Joris accompagne les entreprises et les organisateurs d'événements dans la création de contenus visuels. Reportage corporate et borne photo : il apporte aux Boss son regard créatif, son expérience de l'événementiel et sa capacité à transformer chaque soirée en souvenirs durables.",
   },
   {
     firstName: "Julien",
