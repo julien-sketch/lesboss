@@ -253,7 +253,7 @@ export default function Home() {
             </div>
             <div className="absolute -bottom-5 left-4 z-20 w-28 -rotate-6 rounded-lg border border-line bg-white p-3 shadow-boss sm:-bottom-9 sm:left-8 sm:w-36 sm:p-4">
               <Image
-                src="/images/hero-les-boss.svg"
+                src="/images/fond-event.svg"
                 alt="Aperçu d'un événement Les Boss"
                 width={220}
                 height={160}
