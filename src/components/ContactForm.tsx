@@ -137,7 +137,7 @@ export function ContactForm() {
         </span>
       </label>
       <p className="mt-4 text-sm font-semibold leading-6 text-ink/64">
-        Les informations transmises sont utilisées par SC COM — Gi Photo pour
+        Les informations transmises sont utilisées par SC COM — GI Photo pour
         répondre à votre demande. Les champs marqués d&apos;un astérisque sont
         obligatoires. Pour en savoir plus sur la gestion de vos données et
         exercer vos droits, consultez notre{" "}

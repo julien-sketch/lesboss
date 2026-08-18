@@ -85,7 +85,7 @@ export default function LegalPage() {
             <ul className="list-disc space-y-2 pl-6">
               <li>VPTC, exploitant le nom commercial Picqtures ;</li>
               <li>Astrid Goryn, exploitant le nom commercial Tout Schuss ;</li>
-              <li>SC COM, exploitant le nom commercial Gi Photo.</li>
+              <li>SC COM, exploitant le nom commercial GI Photo.</li>
             </ul>
             <p>
               Les Boss ne constitue pas, à ce jour, une société, une association ou une personne
@@ -140,9 +140,9 @@ export default function LegalPage() {
                 </p>
               </LegalSubsection>
 
-              <LegalSubsection title="Gi Photo">
+              <LegalSubsection title="GI Photo">
                 <InfoBlock>
-                  <p className="font-black">SC COM — Gi Photo</p>
+                  <p className="font-black">SC COM — GI Photo</p>
                   <p>Société à responsabilité limitée au capital de 700 euros</p>
                   <p>Siège social : 31 rue Jules Challier, 73000 Chambéry</p>
                   <p>SIREN : 904 730 892</p>

@@ -43,7 +43,7 @@ const stats = [
   {
     value: "3",
     label: "entrepreneurs à l'origine du projet",
-    detail: "Astrid (Tout schuss), Joris (GI photo) et Julien (Picqtures).",
+    detail: "Astrid (Tout Schuss), Joris (GI photo) et Julien (Picqtures).",
     icon: UsersRound,
   },
   {

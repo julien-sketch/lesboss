@@ -65,7 +65,7 @@ export default function PrivacyPolicyPage() {
         <article className="mx-auto max-w-4xl space-y-12">
           <PrivacySection title="Responsable du traitement">
             <InfoBlock>
-              <p className="font-black">SC COM — Gi Photo</p>
+              <p className="font-black">SC COM — GI Photo</p>
               <p>Société à responsabilité limitée au capital de 700 euros</p>
               <p>31 rue Jules Challier, 73000 Chambéry</p>
               <p>SIREN : 904 730 892</p>
@@ -113,7 +113,7 @@ export default function PrivacyPolicyPage() {
           <PrivacySection title="Destinataires et prestataires">
             <p>Les données peuvent être transmises aux destinataires suivants :</p>
             <ul className="list-disc space-y-2 pl-6">
-              <li>personnes habilitées de SC COM — Gi Photo ;</li>
+              <li>personnes habilitées de SC COM — GI Photo ;</li>
               <li>coorganisateurs concernés lorsque la demande le nécessite ;</li>
               <li>
                 prestataires techniques nécessaires au fonctionnement du service.

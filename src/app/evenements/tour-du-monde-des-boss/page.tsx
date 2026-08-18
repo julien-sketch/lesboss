@@ -54,7 +54,7 @@ export default function TourDuMondePage() {
 
   return (
     <main className="overflow-hidden bg-[#070707] text-white">
-      <section className="relative min-h-screen overflow-hidden px-4 py-8 sm:px-6 sm:py-16 lg:px-8">
+      <section className="relative min-h-screen overflow-hidden px-4 py-12 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <Image
           src="/images/fond-event.svg"
           alt=""
@@ -69,7 +69,7 @@ export default function TourDuMondePage() {
         <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#070707] to-transparent" />
 
         <div className="relative z-10 mx-auto flex min-h-[calc(100vh-4rem)] max-w-7xl items-end justify-end lg:items-center">
-          <div className="relative w-full max-w-7xl overflow-hidden rounded-[24px] border border-white/15 bg-[#07111f]/62 p-5 shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur-[3px] sm:rounded-[28px] sm:p-8 lg:p-10">
+          <div className="relative w-full max-w-7xl overflow-hidden rounded-[24px] border border-white/15 bg-[#07111f]/62 p-6 shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur-[3px] sm:rounded-[28px] sm:p-9 lg:p-12">
             <div className="pointer-events-none absolute inset-x-8 top-7 h-px bg-white/25" />
             <div className="pointer-events-none absolute right-8 top-7 text-[10px] font-black uppercase tracking-[0.45em] text-white/35">
               Boarding pass
@@ -85,7 +85,7 @@ export default function TourDuMondePage() {
               des Boss
             </p>
 
-            <div className="mt-8 grid grid-cols-2 gap-4 border-y border-white/15 py-5 sm:mt-10 sm:grid-cols-4 sm:py-6">
+            <div className="mt-10 grid grid-cols-2 gap-5 border-y border-white/15 py-6 sm:mt-12 sm:grid-cols-4 sm:py-8">
               {flightDetails.map((detail) => (
                 <div key={detail.label}>
                   <p className="text-[10px] font-black uppercase tracking-[0.16em] text-white/55">
@@ -98,7 +98,7 @@ export default function TourDuMondePage() {
               ))}
             </div>
 
-            <div className="mt-9">
+            <div className="mt-12 sm:mt-14">
               <p className="text-[12px] font-black uppercase tracking-[0.2em] text-white/55">
                 Destination
               </p>
@@ -112,7 +112,7 @@ export default function TourDuMondePage() {
               </div>
             </div>
 
-            <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+            <div className="mt-14 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
               {boardingProgram.map((item) => (
                 <div key={item.title} className="border-l border-white/15 pl-4">
                   <p className="inline-flex bg-white px-2.5 py-1 text-[12px] font-black uppercase text-[#1e1f25]">
@@ -125,7 +125,7 @@ export default function TourDuMondePage() {
               ))}
             </div>
 
-            <div className="mt-12 grid gap-8 border-t border-white/15 pt-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+            <div className="mt-16 grid gap-12 border-t border-white/15 pt-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
               <div>
                 <p className="text-[12px] font-black uppercase tracking-[0.2em] text-white/55">
                   Votre boarding pass
@@ -142,12 +142,12 @@ export default function TourDuMondePage() {
                 </p>
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-6">
                 <div>
                   <p className="text-[12px] font-black uppercase tracking-[0.2em] text-white/55">
                     Votre billet comprend :
                   </p>
-                  <ul className="mt-4 grid gap-3 md:grid-cols-2">
+                  <ul className="mt-6 grid gap-4 md:grid-cols-2">
                     {ticketIncludes.map((item) => (
                       <li
                         key={item}
@@ -160,8 +160,8 @@ export default function TourDuMondePage() {
                   </ul>
                 </div>
 
-                <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                  <div className="flex w-full items-center justify-between gap-2 pt-8 pb-1">
+                <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+                  <div className="flex w-full items-center justify-between gap-2 pt-14 pb-2 sm:pt-16">
                     <div className="h-10 flex-1 bg-[repeating-linear-gradient(90deg,#fff_0_3px,transparent_3px_7px)] opacity-90" />
                     <span className="text-[10px] font-black uppercase tracking-[0.25em] text-white/55">
                       Boarding pass

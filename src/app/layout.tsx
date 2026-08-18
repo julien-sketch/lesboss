@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: "/images/og-les-boss.svg",
+        url: "/images/og-les-boss.png",
         width: 1200,
         height: 630,
         alt: "Les Boss, événements dirigeants en Savoie",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Les Boss",
     description: siteConfig.description,
-    images: ["/images/og-les-boss.svg"],
+    images: ["/images/og-les-boss.png"],
   },
 };
 

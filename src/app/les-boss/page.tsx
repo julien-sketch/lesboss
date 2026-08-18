@@ -137,8 +137,8 @@ export default function LesBossPage() {
                 posture.
               </p>
               <p className="mt-4 text-base font-bold leading-7 text-muted sm:text-lg sm:leading-8">
-                Leurs expertises complémentaires — événementiel, création
-                visuelle et accompagnement des dirigeants — permettent
+                Leurs expertises complémentaires événementiel, création
+                visuelle et accompagnement des dirigeants permettent
                 d&apos;imaginer des expériences professionnelles sérieuses dans leur
                 objectif, mais jamais dans leur ambiance.
               </p>
