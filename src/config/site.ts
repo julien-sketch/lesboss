@@ -4,7 +4,7 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://lesboss.fr",
   description:
     "Des événements professionnels originaux en Savoie pour permettre aux dirigeants de faire du business autrement, dans une ambiance conviviale et décontractée.",
-  reservationUrl: "#reservation",
+  reservationUrl: "https://ypl.me/SIi",
   partnerDeckUrl: "#contact",
   socialLinks: [
     

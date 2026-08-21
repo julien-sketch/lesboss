@@ -40,7 +40,7 @@ export function EventCard({ event }: EventCardProps) {
             Voir l&apos;événement
           </ButtonLink>
           <ButtonLink href={event.reservationUrl} variant="secondary">
-            Billetterie ouverte le 17 août
+            Prendre mon billet
           </ButtonLink>
         </div>
       </div>

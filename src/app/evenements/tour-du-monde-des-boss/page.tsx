@@ -167,13 +167,12 @@ export default function TourDuMondePage() {
                       Boarding pass
                     </span>
                   </div>
-                  <button
-                    className="inline-flex min-h-12 cursor-not-allowed items-center justify-center bg-white/70 px-6 py-3 text-sm font-black uppercase tracking-[0.18em] text-[#101114] opacity-80"
-                    type="button"
-                    disabled
+                  <a
+                    className="inline-flex min-h-12 items-center justify-center bg-white px-6 py-3 text-sm font-black uppercase tracking-[0.18em] text-[#101114] transition hover:bg-[#ffcf4a] focus:outline-none focus-visible:ring-4 focus-visible:ring-white/40"
+                    href={event.reservationUrl}
                   >
-                    Billetterie ouverte le 19 août
-                  </button>
+                    Prendre mon billet
+                  </a>
                   <a
                     href="/partenaires"
                     className="inline-flex min-h-12 items-center justify-center border border-white/40 px-6 py-3 text-sm font-black uppercase tracking-[0.18em] text-white transition hover:border-white hover:bg-white/10"
