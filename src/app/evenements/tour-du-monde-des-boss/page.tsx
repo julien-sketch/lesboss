@@ -51,7 +51,7 @@ export default function TourDuMondePage() {
     { label: "Date", value: event.date },
     { label: "Lieu", value: event.location },
     { label: "Participants", value: event.participants + " personnes" },
-    { label: "Ambiance", value: "Le business est sérieux. Sauf l'ambiance." },
+    { label: "Ambiance", value: "Le business est sérieux. Pas l'ambiance." },
   ];
 
   return (

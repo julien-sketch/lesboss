@@ -26,7 +26,7 @@ export const events: BossEvent[] = [
     shortDescription:
       "Les Boss et La Maison Rouge fêtent Noël : une soirée professionnelle et festive pour se rencontrer, échanger et faire du business autrement.",
     fullDescription:
-      "Le 9 décembre 2026 dès 19 h, les dirigeants et entrepreneurs ont rendez-vous à La Maison Rouge pour fêter Noël avec Les Boss. Des rencontres, des échanges et une ambiance conviviale pour terminer l'année ensemble. Le business est sérieux. Sauf l'ambiance.",
+      "Le 9 décembre 2026 dès 19 h, les dirigeants et entrepreneurs ont rendez-vous à La Maison Rouge pour fêter Noël avec Les Boss. Des rencontres, des échanges et une ambiance conviviale pour terminer l'année ensemble. Le business est sérieux. Pas l'ambiance.",
     image: "/images/les-boss-fetent-noel.png",
     imageAlt: "Affiche Les Boss et La Maison Rouge fêtent Noël, le 9 décembre",
     status: "prochainement",

@@ -41,7 +41,7 @@ const highlights = [
   { title: "Rencontres", text: "Dirigeants et entrepreneurs réunis pour échanger autrement." },
   { title: "Esprit de Noël", text: "Une soirée festive pour terminer l'année ensemble." },
   { title: "La Maison Rouge", text: "Le lieu de notre prochain rendez-vous professionnel." },
-  { title: "L'ambiance Les Boss", text: "Le business est sérieux. Sauf l'ambiance." },
+  { title: "L'ambiance Les Boss", text: "Le business est sérieux. Pas l'ambiance." },
 ];
 
 const ticketClassName = "inline-flex min-h-12 items-center justify-center bg-punch px-6 py-3 text-center text-sm font-bold uppercase text-ink transition hover:bg-white focus:outline-none focus-visible:ring-4 focus-visible:ring-punch focus-visible:ring-offset-4 focus-visible:ring-offset-[#240807]";
