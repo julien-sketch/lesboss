@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { CircleDot, Gem, MonitorPlay, Sparkles, Utensils, Wind } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
+import { WindalpsPartners } from "@/components/WindalpsPartners";
 import { getEventBySlug } from "@/data/events";
 import { siteConfig } from "@/config/site";
 
@@ -88,6 +89,8 @@ export default function TourDuMondePage() {
           ))}
         </dl>
       </section>
+
+      <WindalpsPartners />
 
       <section className="bg-ink px-4 py-14 text-white sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">

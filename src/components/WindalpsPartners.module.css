@@ -1,0 +1,77 @@
+.viewport {
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: partners-scroll 32s linear infinite;
+}
+
+/* Equal-width copies make the loop continuous without a visible reset. */
+.group {
+  display: flex;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.logo {
+  display: flex;
+  width: 224px;
+  height: 152px;
+  margin-right: 32px;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 224px;
+  height: 144px;
+  object-fit: contain;
+}
+
+.symbol {
+  width: 112px;
+  height: 112px;
+  object-fit: cover;
+  object-position: left;
+}
+
+.track[data-paused="true"],
+.viewport:hover .track {
+  animation-play-state: paused;
+}
+
+@keyframes partners-scroll {
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    width: 100%;
+    animation: none;
+  }
+
+  .group {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(144px, 1fr));
+    gap: 16px;
+  }
+
+  .group[aria-hidden="true"],
+  .control {
+    display: none;
+  }
+
+  .logo {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .image {
+    max-width: 100%;
+  }
+}

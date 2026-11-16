@@ -92,3 +92,30 @@
  GET /evenements/tour-du-monde-des-boss 200 in 144ms (next.js: 58ms, application-code: 87ms)
  GET /evenements/tour-du-monde-des-boss 200 in 391ms (next.js: 15ms, application-code: 376ms)
  GET /evenements/tour-du-monde-des-boss 200 in 784ms (next.js: 56ms, application-code: 729ms)
+✓ Compiled in 171ms
+ GET /evenements/tour-du-monde-des-boss 200 in 898ms (next.js: 278ms, application-code: 620ms)
+ GET /evenements/tour-du-monde-des-boss 200 in 528ms (next.js: 113ms, application-code: 415ms)
+ GET /evenements/tour-du-monde-des-boss 200 in 424ms (next.js: 63ms, application-code: 362ms)
+ GET /evenements/tour-du-monde-des-boss 200 in 427ms (next.js: 187ms, application-code: 241ms)
+ GET /evenements/tour-du-monde-des-boss 200 in 432ms (next.js: 11ms, application-code: 421ms)
+ GET /evenements/tour-du-monde-des-boss 200 in 433ms (next.js: 129ms, application-code: 303ms)
+ GET /evenements/tour-du-monde-des-boss 200 in 160ms (next.js: 14ms, application-code: 146ms)
+ GET /evenements/tour-du-monde-des-boss 200 in 284ms (next.js: 136ms, application-code: 148ms)
+ GET /evenements/tour-du-monde-des-boss 200 in 74ms (next.js: 10ms, application-code: 64ms)
+✓ Compiled in 151ms
+ GET /evenements/tour-du-monde-des-boss 200 in 244ms (next.js: 107ms, application-code: 137ms)
+ GET /evenements/tour-du-monde-des-boss 200 in 71ms (next.js: 9ms, application-code: 62ms)
+✓ Compiled in 325ms
+ GET /evenements/tour-du-monde-des-boss 200 in 515ms (next.js: 148ms, application-code: 367ms)
+ GET /evenements/tour-du-monde-des-boss 200 in 261ms (next.js: 12ms, application-code: 249ms)
+ GET /evenements/tour-du-monde-des-boss 200 in 178ms (next.js: 16ms, application-code: 162ms)
+ GET /evenements/tour-du-monde-des-boss 200 in 178ms (next.js: 78ms, application-code: 100ms)
+ GET /evenements/tour-du-monde-des-boss 200 in 282ms (next.js: 7ms, application-code: 275ms)
+✓ Compiled in 141ms
+ GET /evenements/tour-du-monde-des-boss 200 in 185ms (next.js: 113ms, application-code: 72ms)
+ GET /evenements/tour-du-monde-des-boss 200 in 311ms (next.js: 11ms, application-code: 300ms)
+✓ Compiled in 133ms
+ GET /evenements/tour-du-monde-des-boss 200 in 222ms (next.js: 128ms, application-code: 94ms)
+ GET /evenements/tour-du-monde-des-boss 200 in 266ms (next.js: 8ms, application-code: 258ms)
+✓ Compiled in 185ms
+ GET /evenements/tour-du-monde-des-boss 200 in 202ms (next.js: 119ms, application-code: 82ms)
