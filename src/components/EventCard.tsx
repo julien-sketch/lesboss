@@ -39,9 +39,11 @@ export function EventCard({ event }: EventCardProps) {
           <ButtonLink href={`/evenements/${event.slug}`}>
             Voir l&apos;événement
           </ButtonLink>
-          <ButtonLink href={event.reservationUrl} variant="secondary">
-            Prendre mon billet
-          </ButtonLink>
+          {event.reservationUrl && event.status === "prochainement" ? (
+            <ButtonLink href={event.reservationUrl} variant="secondary">
+              Prendre mon billet
+            </ButtonLink>
+          ) : null}
         </div>
       </div>
     </article>

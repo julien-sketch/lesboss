@@ -5,13 +5,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { ButtonLink } from "./ButtonLink";
+import { siteConfig } from "@/config/site";
 
 const navItems = [
   { href: "/", label: "Accueil" },
   { href: "/les-boss", label: "Les Boss" },
   {
-    href: "/evenements/tour-du-monde-des-boss",
-    label: "Événement",
+    href: siteConfig.nextEventHref,
+    label: "Prochain événement",
   },
   { href: "/partenaires", label: "Partenaires" },
 ];
@@ -32,10 +33,10 @@ export function SiteHeader() {
           onClick={() => setIsOpen(false)}
         >
           <Image
-            src="/images/logo-les-boss.png"
-            alt="Les Boss"
-            width={240}
-            height={157}
+            src={siteConfig.logo}
+            alt="Les Boss, édition Noël"
+            width={1015}
+            height={670}
             priority
             className="h-10 w-auto sm:h-14"
           />
@@ -58,7 +59,7 @@ export function SiteHeader() {
         </div>
 
         <div className="hidden sm:block">
-          <ButtonLink href="/evenements/tour-du-monde-des-boss">
+          <ButtonLink href={siteConfig.nextEventHref}>
             Voir l&apos;événement
           </ButtonLink>
         </div>
@@ -95,10 +96,10 @@ export function SiteHeader() {
             </Link>
           ))}
           <ButtonLink
-            href="/evenements/tour-du-monde-des-boss"
+            href={siteConfig.nextEventHref}
             className="mt-2 w-full"
           >
-            Voir l&apos;événement du 22 septembre
+            Les Boss fêtent Noël · 9 décembre
           </ButtonLink>
         </div>
       </div>

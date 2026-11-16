@@ -1,0 +1,10 @@
+.page {
+  font-family: var(--font-noel-body), Arial, sans-serif;
+}
+
+.page h1,
+.page h2,
+.page h3 {
+  font-family: var(--font-noel-heading), Georgia, serif;
+  text-wrap: balance;
+}

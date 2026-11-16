@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { SectionHeader } from "@/components/SectionHeader";
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "La marque",
@@ -189,7 +190,7 @@ export default function LesBossPage() {
             </h2>
           </div>
           <ButtonLink
-            href="/evenements/tour-du-monde-des-boss"
+            href={siteConfig.nextEventHref}
             variant="dark"
             className="shrink-0"
           >

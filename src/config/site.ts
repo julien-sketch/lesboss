@@ -1,5 +1,7 @@
 export const siteConfig = {
   name: "Les Boss",
+  logo: "/images/logo-les-boss-noel.svg",
+  nextEventHref: "/evenements/les-boss-fetent-noel",
   mantra: "ET SI ON FAISAIT AUTREMENT ?",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://lesboss.fr",
   description:

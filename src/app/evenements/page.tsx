@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation";
+import { siteConfig } from "@/config/site";
 
 export default function EventsPage() {
-  redirect("/evenements/tour-du-monde-des-boss");
+  redirect(siteConfig.nextEventHref);
 }

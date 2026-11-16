@@ -9,6 +9,7 @@ import {
   Wine,
 } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Soirée blanche des Boss à l'Hôtel Adelphia",
@@ -327,7 +328,7 @@ export default function SoireeBlancheAdelphiaPage() {
             business autrement.
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
-            <ButtonLink href="/evenements/tour-du-monde-des-boss">
+            <ButtonLink href={siteConfig.nextEventHref}>
               Voir le prochain événement
             </ButtonLink>
             <ButtonLink href="/contact" variant="secondary">

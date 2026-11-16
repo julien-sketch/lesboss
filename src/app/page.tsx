@@ -67,7 +67,20 @@ const stats = [
   },
 ];
 
+const nextEvent = events[0];
+
 const experienceCards = [
+  {
+    title: nextEvent.title,
+    day: "09",
+    month: "DÉC. 2026",
+    location: nextEvent.location,
+    description: nextEvent.shortDescription,
+    image: nextEvent.image,
+    imageAlt: nextEvent.imageAlt,
+    href: siteConfig.nextEventHref,
+    tag: "Prochain événement",
+  },
   {
     title: "Soirée blanche des Boss",
     day: "26",
@@ -87,11 +100,11 @@ const experienceCards = [
     month: "SEPT.",
     location: "Windalps à Méry",
     description:
-      "Une soirée professionnelle et festive autour du voyage, d'expériences originales et de rencontres qui comptent.",
-    image: "/images/fond-event.svg",
-    imageAlt: "Dirigeants réunis lors d'un événement Les Boss",
+      "Retour sur une soirée à Windalps : 80 participants, un buffet du monde et des expériences originales pour se rencontrer autrement.",
+    image: "/images/windalps/pole-dance.webp",
+    imageAlt: "Démonstration de pole dance au Tour du monde des Boss à Windalps",
     href: "/evenements/tour-du-monde-des-boss",
-    tag: "Prochain événement",
+    tag: "Événement passé",
   },
 ];
 
@@ -198,8 +211,6 @@ const faq = [
 ];
 
 export default function Home() {
-  const nextEvent = events[0];
-
   return (
     <main>
       <section className="relative overflow-hidden px-4 pb-14 pt-10 sm:px-6 sm:pb-24 sm:pt-20 lg:px-8">
@@ -227,15 +238,15 @@ export default function Home() {
               tour de table et sans ambiance guindée.
             </p>
             <div className="mt-7 flex flex-wrap gap-3 sm:mt-8 sm:gap-4">
-              <ButtonLink href="/evenements/tour-du-monde-des-boss">
-                Voir l&apos;événement du 22 septembre
+              <ButtonLink href={siteConfig.nextEventHref}>
+                Les Boss fêtent Noël · 9 décembre
               </ButtonLink>
               <ButtonLink href="/les-boss" variant="secondary">
                 Comprendre le concept
               </ButtonLink>
             </div>
             <p className="mt-4 text-sm font-semibold text-muted">
-              Prochain rendez-vous : 22 septembre · Windalps à Méry
+              Prochain rendez-vous : {nextEvent.date} dès {nextEvent.time} · {nextEvent.location}
             </p>
           </div>
 
@@ -253,11 +264,11 @@ export default function Home() {
             </div>
             <div className="absolute -bottom-5 left-4 z-20 w-28 -rotate-6 rounded-lg border border-line bg-white p-3 shadow-boss sm:-bottom-9 sm:left-8 sm:w-36 sm:p-4">
               <Image
-                src="/images/fond-event.svg"
-                alt="Aperçu d'un événement Les Boss"
-                width={220}
-                height={160}
-                className="h-16 w-full rounded-md object-cover sm:h-24"
+                src={nextEvent.image}
+                alt={nextEvent.imageAlt}
+                width={1080}
+                height={1920}
+                className="h-auto w-full rounded-md"
               />
               <p className="mt-1 text-center text-[9px] font-black uppercase text-ink sm:text-[11px]">
                 Our Next Event
@@ -329,15 +340,15 @@ export default function Home() {
             {experienceCards.map((card) => (
               <article
                 key={card.title}
-                className="grid w-full overflow-hidden rounded-[18px] bg-white shadow-none md:min-h-[360px] md:grid-cols-[1.04fr_0.96fr]"
+                className={`grid w-full overflow-hidden rounded-[18px] bg-white shadow-none md:min-h-[360px] md:grid-cols-[1.04fr_0.96fr] ${card.href === siteConfig.nextEventHref ? "lg:col-span-2" : ""}`}
               >
-                <div className="relative h-[190px] overflow-hidden rounded-t-[18px] md:h-full md:min-h-[360px] md:rounded-l-[18px] md:rounded-tr-none">
+                <div className={`relative overflow-hidden rounded-t-[18px] md:h-full md:rounded-l-[18px] md:rounded-tr-none ${card.href === siteConfig.nextEventHref ? "aspect-[9/16] max-h-[560px] bg-[#300603] md:aspect-auto md:min-h-[520px]" : "h-[190px] md:min-h-[360px]"}`}>
                   <Image
                     src={card.image}
                     alt={card.imageAlt}
                     fill
                     sizes="(min-width: 768px) 55vw, 100vw"
-                    className="object-cover"
+                    className={card.href === siteConfig.nextEventHref ? "bg-[#300603] object-contain" : "object-cover"}
                   />
                   <div className="absolute left-[18px] top-[14px] rounded-[8px] bg-punch px-[11px] py-[9px] text-center font-black text-ink sm:left-6 sm:top-6 sm:px-4 sm:py-3">
                     <span className="block text-[15px] leading-none sm:text-2xl">
@@ -359,7 +370,7 @@ export default function Home() {
                   <h3 className="text-[20px] font-medium leading-[1.2] text-[#050505] sm:text-4xl lg:text-5xl">
                     {card.title}
                   </h3>
-                  <p className="mt-[12px] max-w-xl text-[10px] font-normal leading-[1.75] text-[#58545a] sm:mt-5 sm:text-base sm:leading-7">
+                  <p className={`mt-[12px] max-w-xl font-normal leading-[1.75] text-[#58545a] sm:mt-5 sm:text-base sm:leading-7 ${card.href === siteConfig.nextEventHref ? "text-sm" : "text-[10px]"}`}>
                     {card.description}
                   </p>
                   <a
@@ -573,13 +584,13 @@ export default function Home() {
               Prêt à vivre l&apos;expérience Les Boss ?
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-white/70 sm:mt-5 sm:text-lg">
-              Rendez-vous le 22 septembre à Windalps, à Méry, pour
-              rencontrer des dirigeants de cinq départements, dans une ambiance
-              qui facilite vraiment les échanges.
+              Rendez-vous le {nextEvent.date} dès {nextEvent.time} à {nextEvent.location}
+              {" "}pour fêter Noël, rencontrer des dirigeants et créer des opportunités
+              dans une ambiance conviviale.
             </p>
             <div className="mt-5 flex justify-center gap-2 sm:mt-8 sm:gap-3">
               <ButtonLink href={`/evenements/${nextEvent.slug}`} variant="dark">
-                Voir le programme du 22 septembre
+                Découvrir la soirée de Noël
               </ButtonLink>
               <ButtonLink href="/contact" variant="secondary">
                 Poser une question

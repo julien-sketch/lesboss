@@ -6,7 +6,7 @@ const primaryLinks = [
   { href: "/", label: "Accueil" },
   { href: "/les-boss", label: "Les Boss" },
   {
-    href: "/evenements/tour-du-monde-des-boss",
+    href: siteConfig.nextEventHref,
     label: "Prochain événement",
   },
   { href: "/partenaires", label: "Partenaires" },
@@ -23,10 +23,10 @@ export function SiteFooter() {
         <div>
           <div className="inline-flex rounded bg-white px-2 py-1 sm:rounded-md sm:px-4 sm:py-2">
             <Image
-              src="/images/logo-les-boss.png"
-              alt="Les Boss"
-              width={240}
-              height={157}
+              src={siteConfig.logo}
+              alt="Les Boss, édition Noël"
+              width={1015}
+              height={670}
               className="h-8 w-auto sm:h-20"
             />
           </div>
